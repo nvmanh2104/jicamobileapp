@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react';
 import { View, Image, Dimensions } from 'react-native';
-import HTML from 'react-native-render-html';
+import RenderHtml from 'react-native-render-html';
 import { fontSizeSet, colorSet } from '../../AppStyles';
 // import { log } from '../../utils/Omni';
 
@@ -41,7 +41,7 @@ export default class Index extends PureComponent {
 
     return (
       <View style={{ padding: 10 }}>
-        <HTML
+        <RenderHtml
           html={`${htmlContent}<div style="width: ${width - 40}"></div>`}
           tagsStyles={tagsStyles}
           renderers={{

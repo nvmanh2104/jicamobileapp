@@ -1,0 +1,9 @@
+-> add api to kttvworker.js
+-> create new redux file inside reduxfolder
+    + add actionTypes
+    + add action
+    + add reducer
+-> add to merger redux
+-> add to merger props
+
+-> call action

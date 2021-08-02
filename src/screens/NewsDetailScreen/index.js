@@ -1,17 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { View, Text, ScrollView } from 'react-native';
-
+import { View, Text, ScrollView ,StatusBar} from 'react-native';
+import Header from '../../components/Header';
 import { actions as newsActions } from '../../redux/NewsRedux';
 //import TransparentLayout from '../../components/TransparentLayout';
 import WebView from '../../components/WebView';
 import Back from '../../components/Back';
 import Divider from '../../components/Divider';
+import RenderHtml from 'react-native-render-html'
 // import Spinner from '../../components/Spinner';
 import { colorSet } from '../../AppStyles';
 import { cleanUpHtmlTag } from '../../utils/html';
 import { log } from '../../utils/Omni';
 import styles from './styles';
+import ArticleDetail from '../../components/ArticleDetail';
+
 
 class NewsDetailScreen extends React.Component {
   static navigationOptions = () => ({
@@ -25,25 +28,27 @@ class NewsDetailScreen extends React.Component {
   }
 
   detail = () => {
-    const { navigation } = this.props;
+    const { navigation,route } = this.props;
     const article =
-      navigation.state && navigation.state.params && navigation.state.params.article
-        ? navigation.state.params.article
+      route && route.params && route.params.article
+        ? route.params.article
         : null;
 
     const { tittle, content } = article;
     if (!article || !content) {
       return null;
     }
-    const text = cleanUpHtmlTag(content);
 
+    // const text = cleanUpHtmlTag(content);
+    
     return (
+
       <View style={styles.container}>
-        <Text style={styles.title}>{tittle}</Text>
-        <Divider />
-        <ScrollView>
-          <WebView textColor={colorSet.Text} fontSize={13} html={text} />
-        </ScrollView>
+      
+      <Header  backButton={this.backButton}/>
+       <ScrollView style ={styles.HtmlView} >
+       <RenderHtml  textColor={colorSet.Text} fontSize={11} html={content} />
+       </ScrollView>
       </View>
     );
   };
@@ -58,7 +63,7 @@ class NewsDetailScreen extends React.Component {
 
     return (
       <React.Fragment>
-        <View backButton={this.backButton}>{this.detail()}</View>
+        <View >{this.detail()}</View>
         {/* {isFetching ? <Spinner mode="overlay" /> : null} */}
       </React.Fragment>
     );

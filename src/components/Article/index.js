@@ -8,8 +8,7 @@ import { log } from '../../utils/log'
 
 export default class Article extends React.Component {
   render() {    
-    log('test data')
-    log(this.props)
+   
     const { title, categoryNew, updated_at } = this.props.article;
     const time = moment(updated_at || moment.now()).fromNow();
 
@@ -44,7 +43,7 @@ const styles = {
     borderWidth: 1,
     borderRadius: 7,
     overflow: 'hidden',
-    marginHorizontal: 20,
+    marginHorizontal: 10,
     marginVertical: 15,
     backgroundColor: colorSet.white,
   },

@@ -1,7 +1,7 @@
 import React from 'react';
-import { FlatList, Text, RefreshControl, View, SafeAreaView } from 'react-native';
+import { FlatList, Text, RefreshControl, View, SafeAreaView,StatusBar } from 'react-native';
 import { connect } from 'react-redux';
-
+import Header from '../../components/Header';
 import { actions as newsActions } from '../../redux/NewsRedux';
 //import TransparentLayout from '../../components/TransparentLayout';
 import Article from '../../components/Article';
@@ -38,6 +38,7 @@ class NewsScreen extends React.Component {
 
   goToNewsDetails = news => {
     const { navigation } = this.props;
+    
     navigation.navigate('NewsDetailScreen', { article: news });
   };
 
@@ -46,13 +47,15 @@ class NewsScreen extends React.Component {
   };
 
   render() {
-    const { isFetching, news } = this.props;    
+    const { isFetching, news } = this.props;  
     return (
       <React.Fragment>
-        <View>
+        <StatusBar barStyle="light-content" />
+        <Header />
+        <View style={styles.container}>
           {isFetching || (news && news.length) ? (
             <FlatList
-              style={{ flex: 1 }}
+              style={{ flex: 1, marginTop:0 }}
               overScrollMode="never"
               data={news}
               renderItem={this.renderItem}

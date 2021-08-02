@@ -13,7 +13,7 @@ export default class ArticleDetail extends React.Component {
 
     return (
       <Modal
-        isVisible={isModalVisible}
+        isVisible={true}
         onBackdropPress={closeModal}
         swipeToClose={false}
         animationDuration={300}

@@ -82,6 +82,16 @@ class KTTVWorker {
     return this.get('newsapi/');    
   }
 
+
+  getStations() {
+    return this.get('stations/');    
+  }
+
+  getDataTable(params) {
+    
+    return this.get('/rain/total_rain', { params });
+  }
+
   get = async function(endpoint, data, timeout) {    
     return await this._request('GET', endpoint, data, timeout);
   };

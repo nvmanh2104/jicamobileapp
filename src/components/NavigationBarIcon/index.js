@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     ...styleSet.ColumnCenter,
     width: 40,
     height: 40,
-    marginHorizontal: Platform.OS === 'ios' ? 5 : 0,
+   
   },
   icon: {
     opacity: 1,

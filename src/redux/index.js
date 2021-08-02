@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 import { reducer as NetInfoReducer } from './NetInfoRedux';
 import { reducer as NewsReducer } from './NewsRedux';
+import {reducer as AwsReducer} from './AwsRedux'
 
 const config = {
   key: 'root',
@@ -17,4 +18,5 @@ const config = {
 export default persistCombineReducers(config, {    
   weatherNews: NewsReducer,
   netInfo: NetInfoReducer,
+  aws:AwsReducer
 });
