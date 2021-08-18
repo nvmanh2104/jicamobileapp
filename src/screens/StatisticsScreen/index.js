@@ -1,16 +1,18 @@
 import React from 'react';
-import { FlatList, Text, RefreshControl, View, SafeAreaView } from 'react-native';
-import { connect } from 'react-redux';
-
-import { actions as newsActions } from '../../redux/NewsRedux';
-//import TransparentLayout from '../../components/TransparentLayout';
-import Article from '../../components/Article';
-// import Spinner from '../../components/Spinner';
-// import { moment } from '../../utils/Omni';
-import { colorSet } from '../../AppStyles';
+import {
+  Text,
+  View,
+  StatusBar
+} from 'react-native';
+import {connect} from 'react-redux';
+import moment from 'moment';
+import {actions as newsActions} from '../../redux/NewsRedux';
+import MenuPicker from '../../components/MenuPicker';
+import {actions as awsAction} from '../../redux/AwsRedux'
 import styles from './styles';
-import { log } from '../../utils/log';
 
+import _IconIO from 'react-native-vector-icons/Ionicons';
+import Tables from '../../components/Tables';
 class StatisticScreen extends React.Component {
   static navigationOptions = () => ({
     header: null,
@@ -20,13 +22,17 @@ class StatisticScreen extends React.Component {
     super(props);
 
     this.state = {
-    //   isNewsModalOpen: false,
-    //   viewingNews: null,
+      isVisible: false,
+      values:{
+        StationIDs: null, isDate: false,DateTimeFrom: moment().format('YYYY-MM-DDTHH:mm'),
+        DateTimeTo: moment().format('YYYY-MM-DDTHH:mm'),
+              interval : {label:"10M",value:"10"}}
+      
     };
   }
 
   componentDidMount() {
-    // const { navigation, getWeatherNews } = this.props;    
+    // const { navigation, getWeatherNews } = this.props;
     // this._navListener = navigation.addListener('focus', () => {
     //   getWeatherNews();
     //});
@@ -36,22 +42,39 @@ class StatisticScreen extends React.Component {
     // this.props.getWeatherNews(true);
   };
 
-  goToNewsDetails = news => {
-    // const { navigation } = this.props;
-    // navigation.navigate('NewsDetailScreen', { article: news });
-  };
+ 
+  closeModal =()=>{
+    this.setState({isVisible:false})
+  }
+  openModal =()=>{
+    this.setState({isVisible:true})
+  }
 
-//   renderItem = ({ item, index }) => {
-//     return <Article article={item} openNews={() => this.goToNewsDetails(item)} />;
-//   };
+  onSubmitForm =(values)=>{
+     this.setState({values:values,isVisible:false})
+    
+    // this.props.getDataTable({StationIDs,Interval,DateTimeFrom,DateTimeTo})
+     
+  }
 
   render() {
-    // const { isFetching, news } = this.props;  
-    // console.log(news) 
+   
+
     return (
       <React.Fragment>
+        <StatusBar barStyle ="light-content"></StatusBar>
+        <View style ={styles.header}>
+          <View style ={styles.labelContainer}>
+          <_IconIO name = "menu-outline" size ={40} style ={styles.dateIcon}onPress={this.openModal} />
+        <Text style={styles.labelText}>{this.state.values.DateTimeFrom? `From: ${this.state.values.DateTimeFrom} to ${this.state.values.DateTimeTo}`:''}</Text>
+          </View>
+        </View>
         <View style={styles.container}>
-            <Text>Trang Statistic</Text>
+          <MenuPicker isVisible={this.state.isVisible}
+          closeModal ={this.closeModal}
+          onSubmitForm = {this.onSubmitForm}
+          />
+        <Tables></Tables>
         </View>
         {/* {isFetching ? <Spinner mode="overlay" /> : null} */}
       </React.Fragment>
@@ -59,24 +82,23 @@ class StatisticScreen extends React.Component {
   }
 }
 
-const mapStateToProps = ({ netInfo, weatherNews }) => ({
+const mapStateToProps = ({netInfo, aws}) => ({
   // netInfo,
-//   isFetching: weatherNews.isFetching,
-//   news: weatherNews.news,
+  //   isFetching: weatherNews.isFetching,
+  //   news: weatherNews.news,
+
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
-  const { dispatch } = dispatchProps;
+  const {dispatch} = dispatchProps;
 
   return {
     ...ownProps,
     ...stateProps,
-    
+    getDataTable: (params) => {
+      dispatch(awsAction.getDataTable(params));
+    },
   };
 };
 
-export default connect(
-  mapStateToProps,
-  undefined,
-  mergeProps
-)(StatisticScreen);
+export default connect(mapStateToProps, undefined, mergeProps)(StatisticScreen);

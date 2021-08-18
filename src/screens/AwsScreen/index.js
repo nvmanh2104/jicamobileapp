@@ -4,38 +4,39 @@ import { connect } from 'react-redux';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import Maps from '../../components/Maps'
 import {actions as awsAction} from '../../redux/AwsRedux'
+import ModalMapView from '../../components/ModalMapView';
 // import Spinner from '../../components/Spinner';
 // import { moment } from '../../utils/Omni';
 import { colorSet } from '../../AppStyles';
 import styles from './styles';
 import { log } from '../../utils/log';
 import Header from '../../components/Header';
-
-class AwsScreen extends React.Component {
+import moment from 'moment';
+class AwsScreen extends React.PureComponent {
   static navigationOptions = () => ({
     header: null,
   });
 
   constructor(props) {
     super(props);
-
-    this.state = {
-    //   isNewsModalOpen: false,
-    //   viewingNews: null,
-    };
   }
+
+  getFirstData = ()=>{
+    var DateTimeTo = moment("2021-04-26T00:00:00").format("YYYY-MM-DD") + 'T00:00:00'
+    var DateTimeFrom = moment("2021-04-26T00:00:00").add(-1,'d').format("YYYY-MM-DD") + 'T00:00:00'
+    var Interval =60
+    this.props.getDataTable({StationIDs:null,Interval,DateTimeFrom,DateTimeTo})
+  }
+
 
   componentDidMount() {
-const { navigation, getStations, getDataTable} = this.props;    
+  const { navigation, getStations} = this.props;    
     this._navListener = navigation.addListener('focus', () => {
       getStations();
-
-      getDataTable({StationIDs:null,Interval:60,DateTimeFrom:"2021-04-25T00:00:00",DateTimeTo:"2021-04-26T00:00:00"})
+      this.getFirstData();
     });
-
-    
   }
-
+  
 
   // getFirstData= ()=>{
   //   this.
@@ -50,13 +51,16 @@ const { navigation, getStations, getDataTable} = this.props;
   };
   render() {
     const{isFetching,stations,data}= this.props
+
+    let jicaStations =  stations.length!==0 ? stations.filter(x =>x.Project==='JICA'):[]
+    
     return (
       <React.Fragment>
         <StatusBar barStyle ="light-content"></StatusBar>
         <Header/>
-        <Maps stations = {stations}
+        <Maps stations = {jicaStations}
         data = {data}/>
-        
+        <ModalMapView></ModalMapView>
         
       </React.Fragment>
     );

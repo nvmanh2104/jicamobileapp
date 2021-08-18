@@ -2,14 +2,10 @@ import React from 'react';
 import { FlatList, Text, RefreshControl, View, SafeAreaView } from 'react-native';
 import { connect } from 'react-redux';
 
-import { actions as newsActions } from '../../redux/NewsRedux';
-//import TransparentLayout from '../../components/TransparentLayout';
-import Article from '../../components/Article';
-// import Spinner from '../../components/Spinner';
-// import { moment } from '../../utils/Omni';
 import { colorSet } from '../../AppStyles';
 import styles from './styles';
 import { log } from '../../utils/log';
+import LineChart from '../../components/LineChart';
 
 class RadarScreen extends React.Component {
   static navigationOptions = () => ({
@@ -20,30 +16,19 @@ class RadarScreen extends React.Component {
     super(props);
 
     this.state = {
-    //   isNewsModalOpen: false,
-    //   viewingNews: null,
+  
     };
   }
 
   componentDidMount() {
-    // const { navigation, getWeatherNews } = this.props;    
-    // this._navListener = navigation.addListener('focus', () => {
-    //   getWeatherNews();
-    //});
+
   }
 
   onRefresh = () => {
     // this.props.getWeatherNews(true);
   };
 
-  goToNewsDetails = news => {
-    // const { navigation } = this.props;
-    // navigation.navigate('NewsDetailScreen', { article: news });
-  };
-
-//   renderItem = ({ item, index }) => {
-//     return <Article article={item} openNews={() => this.goToNewsDetails(item)} />;
-//   };
+  
 
   render() {
     // const { isFetching, news } = this.props;  
@@ -51,9 +36,9 @@ class RadarScreen extends React.Component {
     return (
       <React.Fragment>
         <View style={styles.container}>
-            <Text>Trang Radar</Text>
+         
         </View>
-        {/* {isFetching ? <Spinner mode="overlay" /> : null} */}
+      
       </React.Fragment>
     );
   }

@@ -55,7 +55,7 @@ class NewsScreen extends React.Component {
         <View style={styles.container}>
           {isFetching || (news && news.length) ? (
             <FlatList
-              style={{ flex: 1, marginTop:0 }}
+              style={{ flex: 1, marginTop:0,marginHorizontal:5 }}
               overScrollMode="never"
               data={news}
               renderItem={this.renderItem}

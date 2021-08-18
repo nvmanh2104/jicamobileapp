@@ -7,3 +7,41 @@
 -> add to merger props
 
 -> call action
+
+
+
+-------logic AWS--------
+
+component -> AWSScreen      
+   -> Map
+   -> ModalMapView
+
+component -> Map  
+     + MapView
+     + Marker  (onclick) 
+
+component -> ModalMapView 
+     -> LineChart   (data1h, data10m)
+     
+
+
+--------logic menuPicker--------
+station input
+
+advanced radio button check
+
+if checked 
+date time input from
+date time input to
+
+else
+datetime iput from
+
+interval selection
+
+button submit
+
+--------logic stastistic----------
+
+
+

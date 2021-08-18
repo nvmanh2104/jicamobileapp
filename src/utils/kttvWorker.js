@@ -18,29 +18,7 @@ class KTTVWorker {
     if (url) this.baseUrl = url;
   }
 
-  getCurrentWeather(location) {
-    const params = {
-      Lat: location.latitude || Constants.defaultLocation.latitude,
-      Lon: location.longitude || Constants.defaultLocation.longitude,
-    };
-    return this.get('weather/realdata', { params });
-  }
-
-  getDailyForecastWeather(location) {
-    const params = {
-      Lat: location.latitude || Constants.defaultLocation.latitude,
-      Lon: location.longitude || Constants.defaultLocation.longitude,
-    };
-    return this.get('weather/daily', { params });
-  }
-
-  getDetailForecastWeather(location) {
-    const params = {
-      Lat: location.latitude || Constants.defaultLocation.latitude,
-      Lon: location.longitude || Constants.defaultLocation.longitude,
-    };
-    return this.get('weather/detaildaily', { params });
-  }
+  
 
   getLocationAddress(location) {
     const params = {
@@ -77,12 +55,13 @@ class KTTVWorker {
     };
     return this.get('alert', { params });
   }
-
+  //news api
   getWeatherNews() {
     return this.get('newsapi/');    
   }
 
 
+  //aws api
   getStations() {
     return this.get('stations/');    
   }
@@ -91,6 +70,19 @@ class KTTVWorker {
     
     return this.get('/rain/total_rain', { params });
   }
+  get10mDatas(params) {
+    
+    return this.get('/rain/rain10m', { params });
+  }
+  
+  get1hDatas(params) {
+    
+    return this.get('/rain/rain1h', { params });
+  }
+
+
+
+
 
   get = async function(endpoint, data, timeout) {    
     return await this._request('GET', endpoint, data, timeout);
