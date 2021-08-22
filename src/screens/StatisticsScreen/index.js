@@ -24,9 +24,9 @@ class StatisticScreen extends React.Component {
     this.state = {
       isVisible: false,
       values:{
-        StationIDs: null, isDate: false,DateTimeFrom: moment().format('YYYY-MM-DDTHH:mm'),
+        StationIDs: null, DateTimeFrom: moment().add(-6, 'h').format('YYYY-MM-DDTHH:mm'),
         DateTimeTo: moment().format('YYYY-MM-DDTHH:mm'),
-              interval : {label:"10M",value:"10"}}
+        Interval : 10}
       
     };
   }
@@ -51,16 +51,21 @@ class StatisticScreen extends React.Component {
   }
 
   onSubmitForm =(values)=>{
-     this.setState({values:values,isVisible:false})
-    
-    // this.props.getDataTable({StationIDs,Interval,DateTimeFrom,DateTimeTo})
+    this.setState({values:values,isVisible:false})
+    var StationIDs = values.StationIDs
+    var Interval = values.Interval
+    var DateTimeFrom = values.DateTimeFrom+":00"
+    var DateTimeTo = values.DateTimeTo+":00"
+    this.props.getDataTable({StationIDs,Interval,DateTimeFrom,DateTimeTo})
+  
      
   }
 
   render() {
-   
+ 
 
     return (
+      
       <React.Fragment>
         <StatusBar barStyle ="light-content"></StatusBar>
         <View style ={styles.header}>
@@ -74,7 +79,7 @@ class StatisticScreen extends React.Component {
           closeModal ={this.closeModal}
           onSubmitForm = {this.onSubmitForm}
           />
-        <Tables></Tables>
+        <Tables header = {this.state.values}></Tables>
         </View>
         {/* {isFetching ? <Spinner mode="overlay" /> : null} */}
       </React.Fragment>

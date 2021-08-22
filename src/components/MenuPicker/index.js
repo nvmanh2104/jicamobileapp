@@ -35,8 +35,10 @@ class MenuPicker extends React.Component {
     this.state = {
       
     };
+  } 
+  handleSubmit =(values)=>{
+    this.props.onSubmitForm(values)
   }
-
   componentDidMount() {}
   render() {
 
@@ -61,12 +63,12 @@ class MenuPicker extends React.Component {
             }}>
             <View style={{flex: 1}}>
               <Formik
-                initialValues={{StationIDs: null, isDate: false,DateTimeFrom: moment().format('YYYY-MM-DDTHH:mm'),
+                initialValues={{StationIDs: null,DateTimeFrom: moment().format('YYYY-MM-DDTHH:mm'),
                 DateTimeTo: moment().format('YYYY-MM-DDTHH:mm'),
-              interval : {label:"10M",value:"10"}
+              Interval : 10
               
               }}
-                onSubmit={values => this.props.onSubmitForm(values)}>
+                onSubmit={values => this.handleSubmit(values)}>
                 {({
                   handleChange,
                   handleBlur,
@@ -93,7 +95,7 @@ class MenuPicker extends React.Component {
                     <DateTime name = 'DateTimeTo' label="EndDate" value={values.DateTimeTo} setFieldValue={setFieldValue} />
                   
 
-                    <Dropdown name = 'interval' label="Interval" value={values.interval} setFieldValue={setFieldValue}/>
+                    <Dropdown name = 'Interval' label="Interval" value={values.Interval} setFieldValue={setFieldValue}/>
 
                     </View>
                     <TouchableOpacity style = {styles.btnSubmit}

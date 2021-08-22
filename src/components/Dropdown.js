@@ -29,14 +29,15 @@ class Dropdown extends React.Component {
   }
 
   setValue=(callback)=> {   
-   this.props.setFieldValue(this.props.name,callback(this.props.value.value))
+   this.props.setFieldValue(this.props.name,callback(this.props.value))
   }
 
-  setItems=(callback) =>{
-    this.props.setFieldValue(this.props.name,callback(this.props.value.items))
-  }
+//   setItems=(callback) =>{
+ 
+//     this.props.setFieldValue(this.props.name,callback(this.props.value))
+//   }
   render() {
-    const {open, items} = this.state;
+    const {open} = this.state;
     const {  value,label } = this.props;
     return (
       <React.Fragment>
@@ -47,11 +48,10 @@ class Dropdown extends React.Component {
 
       open={open}
       value={value}
-      items={ [ {label: '10M', value: '10'},
-      {label: '1H', value: '60'}]}
+      items={ [ {label: '10M', value: 10},
+      {label: '1H', value: 60}]}
       setOpen={this.setOpen}
       setValue={this.setValue}
-      setItems={this.setItems}
       style={styles.dtInput}
     />
         </View>
