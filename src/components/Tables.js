@@ -20,10 +20,9 @@ class Tables extends React.PureComponent {
     this.rightRef = React.createRef();
 
     this.state = {
-      leftHead: ['Station', 'Name', 'Total'],
-      lefArr: [80, 100],
-
-      
+      leftHeadEN: ['Station', 'Name', 'Total'],
+      leftHeadVIE: ['Mã', 'Tên', 'Tổng'],
+      lefArr: [60, 100,70],  
     };
   }
   //   const leftRef = useRef<ScrollView>(null);
@@ -173,7 +172,7 @@ class Tables extends React.PureComponent {
             <View>
               <Table borderStyle={{borderWidth: 1, borderColor}}>
                 <Row
-                  data={this.state.leftHead}
+                  data={this.props.language? this.state.leftHeadVIE:this.state.leftHeadEN}
                   widthArr={this.state.lefArr}
                   style={styles.head}
                   textStyle={{...styles.text, color: 'white'}}
@@ -183,7 +182,13 @@ class Tables extends React.PureComponent {
                 ref={this.leftRef}
                 style={styles.dataWrapper}
                 scrollEventThrottle={16}
-                bounces={false}>
+                bounces={false}
+                onScroll={e => {
+                  const {y} = e.nativeEvent.contentOffset;
+                  this.rightRef.current?.scrollTo({y, animated: false});
+                }}>
+              
+                  
                 <Table borderStyle={{borderWidth: 1, borderColor}}>
                   {leftData.map((rowData, index) => (
                     <Row
@@ -255,12 +260,13 @@ const styles = StyleSheet.create({
   dataWrapper: {marginTop: -1},
 });
 
-const mapStateToProps = ({netInfo, aws}) => ({
+const mapStateToProps = ({netInfo, aws,locationReducer}) => ({
   // netInfo,
   //   isFetching: weatherNews.isFetching,
   //   news: weatherNews.news,
   stations: aws.stationReducer.stations,
   data: aws.tableDataReducer.data,
+  language: locationReducer.languageReducer.isEn,
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {

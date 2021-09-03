@@ -1,18 +1,15 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  StatusBar
-} from 'react-native';
+import {Text, View, StatusBar} from 'react-native';
 import {connect} from 'react-redux';
 import moment from 'moment';
 import {actions as newsActions} from '../../redux/NewsRedux';
 import MenuPicker from '../../components/MenuPicker';
-import {actions as awsAction} from '../../redux/AwsRedux'
+import {actions as awsAction} from '../../redux/AwsRedux';
 import styles from './styles';
 
 import _IconIO from 'react-native-vector-icons/Ionicons';
 import Tables from '../../components/Tables';
+import settingLanguage from '../../utils/settingLanguage';
 class StatisticScreen extends React.Component {
   static navigationOptions = () => ({
     header: null,
@@ -23,11 +20,12 @@ class StatisticScreen extends React.Component {
 
     this.state = {
       isVisible: false,
-      values:{
-        StationIDs: null, DateTimeFrom: moment().add(-6, 'h').format('YYYY-MM-DDTHH:mm'),
+      values: {
+        StationIDs: null,
+        DateTimeFrom: moment().add(-6, 'h').format('YYYY-MM-DDTHH:mm'),
         DateTimeTo: moment().format('YYYY-MM-DDTHH:mm'),
-        Interval : 10}
-      
+        Interval: 10,
+      },
     };
   }
 
@@ -42,44 +40,56 @@ class StatisticScreen extends React.Component {
     // this.props.getWeatherNews(true);
   };
 
- 
-  closeModal =()=>{
-    this.setState({isVisible:false})
-  }
-  openModal =()=>{
-    this.setState({isVisible:true})
-  }
+  closeModal = () => {
+    this.setState({isVisible: false});
+  };
+  openModal = () => {
+    this.setState({isVisible: true});
+  };
 
-  onSubmitForm =(values)=>{
-    this.setState({values:values,isVisible:false})
-    var StationIDs = values.StationIDs
-    var Interval = values.Interval
-    var DateTimeFrom = values.DateTimeFrom+":00"
-    var DateTimeTo = values.DateTimeTo+":00"
-    this.props.getDataTable({StationIDs,Interval,DateTimeFrom,DateTimeTo})
-  
-     
-  }
+  onSubmitForm = values => {
+    this.setState({values: values, isVisible: false});
+    var StationIDs = values.StationIDs;
+    var Interval = values.Interval;
+    var DateTimeFrom = values.DateTimeFrom + ':00';
+    var DateTimeTo = values.DateTimeTo + ':00';
+    this.props.getDataTable({StationIDs, Interval, DateTimeFrom, DateTimeTo});
+  };
 
   render() {
- 
-
     return (
-      
       <React.Fragment>
-        <StatusBar barStyle ="light-content"></StatusBar>
-        <View style ={styles.header}>
-          <View style ={styles.labelContainer}>
-          <_IconIO name = "menu-outline" size ={40} style ={styles.dateIcon}onPress={this.openModal} />
-        <Text style={styles.labelText}>{this.state.values.DateTimeFrom? `From: ${this.state.values.DateTimeFrom} to ${this.state.values.DateTimeTo}`:''}</Text>
+        <StatusBar barStyle="light-content"></StatusBar>
+        <View style={styles.header}>
+          <View style={styles.labelContainer}>
+            <_IconIO
+              name="menu-outline"
+              size={40}
+              style={styles.dateIcon}
+              onPress={this.openModal}
+            />
+            <Text style={styles.labelText}>
+              {this.state.values.DateTimeFrom
+                ? `${
+                    this.props.language
+                      ? settingLanguage.TU.VIE
+                      : settingLanguage.TU.EN
+                  }: ${this.state.values.DateTimeFrom} ${
+                    this.props.language
+                      ? settingLanguage.DEN.VIE
+                      : settingLanguage.DEN.EN
+                  } ${this.state.values.DateTimeTo}`
+                : ''}
+            </Text>
           </View>
         </View>
         <View style={styles.container}>
-          <MenuPicker isVisible={this.state.isVisible}
-          closeModal ={this.closeModal}
-          onSubmitForm = {this.onSubmitForm}
+          <MenuPicker
+            isVisible={this.state.isVisible}
+            closeModal={this.closeModal}
+            onSubmitForm={this.onSubmitForm}
           />
-        <Tables header = {this.state.values}></Tables>
+          <Tables header={this.state.values}></Tables>
         </View>
         {/* {isFetching ? <Spinner mode="overlay" /> : null} */}
       </React.Fragment>
@@ -87,11 +97,10 @@ class StatisticScreen extends React.Component {
   }
 }
 
-const mapStateToProps = ({netInfo, aws}) => ({
+const mapStateToProps = ({netInfo, locationReducer}) => ({
   // netInfo,
   //   isFetching: weatherNews.isFetching,
-  //   news: weatherNews.news,
-
+  language: locationReducer.languageReducer.isEn,
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
@@ -100,7 +109,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return {
     ...ownProps,
     ...stateProps,
-    getDataTable: (params) => {
+    getDataTable: params => {
       dispatch(awsAction.getDataTable(params));
     },
   };

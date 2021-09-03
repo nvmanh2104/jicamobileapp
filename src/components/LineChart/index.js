@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, View, Dimensions} from 'react-native';
+import {Text, Dimensions} from 'react-native';
 import {connect} from 'react-redux';
+import settingLanguage from '../../utils/settingLanguage'
 import {
   Chart,
   Line,
@@ -23,8 +24,10 @@ class LineChart extends React.Component {
     var {data} = this.props;
     
     // var yMin = data.reduce((min, p) => p.y < min ? p.y : min, data[0].y);
-    var yMax = data.length ===0?0:data.reduce((max, p) => p.y > max ? p.y : max, data[0].y);
-   
+    // var yMax = data.length ===0?0: parseInt(data.reduce((max, p) => p.y > max ? p.y : max, data[0].y));
+     var yMax = data.length ===0?0: Math.max.apply(Math, data.map(function(o) { return o.y; }))+1;
+    console.log(data)
+    console.log(yMax)
 
     return (
       <React.Fragment>
@@ -37,7 +40,7 @@ class LineChart extends React.Component {
        yDomain={{min: 0, max: yMax}}>
        <VerticalAxis
          tickCount={5}
-         theme={{labels: {formatter: v => v.toFixed(2) +"mm"}}}
+         theme={{labels: {formatter: v => v===null? null:v.toFixed(2)+"mm"}}}
        />
        <HorizontalAxis
          tickCount={9}
@@ -71,7 +74,7 @@ class LineChart extends React.Component {
               rx: 4,
               color: 'black',
             },
-               formatter: (v: data) =>`${String(moment(v.x).format('DD-MM HH:mm'))}-${String(v.y)} mm` ,
+               formatter: (v: data) =>`${String(moment(v.x).format('DD-MM HH:mm'))}-${v.y ===null? 'null':String(v.y)} mm` ,
              }}
            />
          }
@@ -84,7 +87,7 @@ class LineChart extends React.Component {
          }}
        />
      </Chart>:
-     <Text style ={{justifyContent:'center'}}>Missing Data</Text>
+     <Text style ={{justifyContent:'center'}}>{this.props.language? settingLanguage.MISINGDATA.VIE:settingLanguage.MISINGDATA.EN},</Text>
     }
        
       </React.Fragment>
@@ -92,7 +95,9 @@ class LineChart extends React.Component {
   }
 }
 
-const mapStateToProps = ({aws}) => ({});
+const mapStateToProps = ({aws,locationReducer}) => ({
+  language :locationReducer.languageReducer.isEn
+});
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
   const {dispatch} = dispatchProps;

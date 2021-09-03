@@ -45,3 +45,24 @@ button submit
 
 
 
+-------logic get location ------------
+
+appload get location ---> convert latlon to address apition
+open setting buton update location
+
+
+
+
+when setting open type on search get suggest from api
+press search button to confirm => chose from search list => save to saved location
+
+delete saved location
+
+--------logic get news-----------
+get from api with all saved location and current location
+
+
+
+
+chose 
+

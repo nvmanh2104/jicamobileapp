@@ -1,11 +1,10 @@
 import React from 'react';
-import { FlatList, Text, RefreshControl, View, SafeAreaView } from 'react-native';
+import {  View, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 
 import { colorSet } from '../../AppStyles';
 import styles from './styles';
-import { log } from '../../utils/log';
-import LineChart from '../../components/LineChart';
+import { WebView } from 'react-native-webview';
 
 class RadarScreen extends React.Component {
   static navigationOptions = () => ({
@@ -31,16 +30,14 @@ class RadarScreen extends React.Component {
   
 
   render() {
-    // const { isFetching, news } = this.props;  
-    // console.log(news) 
-    return (
-      <React.Fragment>
-        <View style={styles.container}>
-         
-        </View>
-      
-      </React.Fragment>
-    );
+   return(
+     <React.Fragment>
+        <StatusBar barStyle="light-content"></StatusBar>
+        <View style={styles.header}></View>
+      <WebView style={styles.webview} source={{ uri: 'http://jica.weathervietnam.vn/mobileradar' }} />
+     </React.Fragment>
+    
+   ) 
   }
 }
 

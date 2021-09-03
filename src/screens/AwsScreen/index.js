@@ -35,6 +35,8 @@ class AwsScreen extends React.PureComponent {
       getStations();
       this.getFirstData();
     });
+    
+
   }
   
 
@@ -85,6 +87,9 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     },
     getDataTable: (params) => {
       dispatch(awsAction.getDataTable(params));
+    },
+    closeAWSModal: () => {
+      dispatch(awsAction.closeAWSModal());
     },
   };
 };

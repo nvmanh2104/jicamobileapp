@@ -4,20 +4,19 @@ import {
   Text,
   View,
   Dimensions,
-  Button,
   TextInput,
   Keyboard,
   TouchableWithoutFeedback,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 
 import {connect} from 'react-redux';
 import Modal from 'react-native-modal';
 import {Formik} from 'formik';
-import Checkbox from '../Checkbox';
 import moment from 'moment';
 import DateTime from '../Datetime';
 import Dropdown from '../Dropdown';
+import settingLanguage from '../../utils/settingLanguage';
 var {width, height} = Dimensions.get('window');
 
 const DismissKeyboardHOC = Comp => {
@@ -32,16 +31,13 @@ const DismissKeyboardView = DismissKeyboardHOC(View);
 class MenuPicker extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      
-    };
-  } 
-  handleSubmit =(values)=>{
-    this.props.onSubmitForm(values)
+    this.state = {};
   }
+  handleSubmit = values => {
+    this.props.onSubmitForm(values);
+  };
   componentDidMount() {}
   render() {
-
     return (
       <React.Fragment>
         <Modal
@@ -59,15 +55,15 @@ class MenuPicker extends React.Component {
               alignItems: 'center',
               borderRadius: 4,
               borderColor: 'rgba(0, 0, 0, 0.1)',
-             
             }}>
             <View style={{flex: 1}}>
               <Formik
-                initialValues={{StationIDs: null,DateTimeFrom: moment().format('YYYY-MM-DDTHH:mm'),
-                DateTimeTo: moment().format('YYYY-MM-DDTHH:mm'),
-              Interval : 10
-              
-              }}
+                initialValues={{
+                  StationIDs: null,
+                  DateTimeFrom: moment().format('YYYY-MM-DDTHH:mm'),
+                  DateTimeTo: moment().format('YYYY-MM-DDTHH:mm'),
+                  Interval: 10,
+                }}
                 onSubmit={values => this.handleSubmit(values)}>
                 {({
                   handleChange,
@@ -78,7 +74,11 @@ class MenuPicker extends React.Component {
                 }) => (
                   <React.Fragment>
                     <View style={styles.formGroup}>
-                      <Text style={styles.inputText}>StationID</Text>
+                      <Text style={styles.inputText}>
+                        {this.props.language
+                          ? settingLanguage.MA.VIE
+                          : settingLanguage.MA.EN}
+                      </Text>
                       <DismissKeyboardView>
                         <TextInput
                           style={styles.input}
@@ -89,36 +89,61 @@ class MenuPicker extends React.Component {
                       </DismissKeyboardView>
                     </View>
                     <View style={styles.formGroup}>
-                    
-                    
-                    <DateTime name = 'DateTimeFrom' label="StartDate" value={values.DateTimeFrom} setFieldValue={setFieldValue}  />
-                    <DateTime name = 'DateTimeTo' label="EndDate" value={values.DateTimeTo} setFieldValue={setFieldValue} />
-                  
+                      <DateTime
+                        name="DateTimeFrom"
+                        label={
+                          this.props.language
+                            ? settingLanguage.BATDAU.VIE
+                            : settingLanguage.BATDAU.EN
+                        }
+                        value={values.DateTimeFrom}
+                        setFieldValue={setFieldValue}
+                      />
+                      <DateTime
+                        name="DateTimeTo"
+                        label={
+                          this.props.language
+                            ? settingLanguage.KETHUC.VIE
+                            : settingLanguage.KETHUC.EN
+                        }
+                        value={values.DateTimeTo}
+                        setFieldValue={setFieldValue}
+                      />
 
-                    <Dropdown name = 'Interval' label="Interval" value={values.Interval} setFieldValue={setFieldValue}/>
-
+                      <Dropdown
+                        name="Interval"
+                        label={
+                          this.props.language
+                            ? settingLanguage.TANSUAT.VIE
+                            : settingLanguage.TANSUAT.EN
+                        }
+                        value={values.Interval}
+                        setFieldValue={setFieldValue}
+                      />
                     </View>
-                    <TouchableOpacity style = {styles.btnSubmit}
-                    onPress ={handleSubmit}
-           
-                    >
-                      <Text style ={styles.btnSubmitText}>Submit</Text>
+                    <TouchableOpacity
+                      style={styles.btnSubmit}
+                      onPress={handleSubmit}>
+                      <Text style={styles.btnSubmitText}>
+                        {this.props.language
+                          ? settingLanguage.SUBMIT.VIE
+                          : settingLanguage.SUBMIT.EN}
+                      </Text>
                     </TouchableOpacity>
                     {/* <Button style ={styles.btnSubmit}onPress={handleSubmit} title="Submit" /> */}
                   </React.Fragment>
                 )}
               </Formik>
-              <TouchableOpacity style = {styles.btnClose}
-                    onPress ={this.props.closeModal}
-           
-                    >
-                      <Text style ={styles.btnSubmitText}>Close</Text>
-                    </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.btnClose}
+                onPress={this.props.closeModal}>
+                <Text style={styles.btnSubmitText}>
+                  {this.props.language
+                    ? settingLanguage.DONG.VIE
+                    : settingLanguage.DONG.EN}
+                </Text>
+              </TouchableOpacity>
             </View>
-             
-            
-                  
-           
           </View>
         </Modal>
       </React.Fragment>
@@ -126,7 +151,9 @@ class MenuPicker extends React.Component {
   }
 }
 
-const mapStateToProps = ({}) => ({});
+const mapStateToProps = ({locationReducer}) => ({
+  language: locationReducer.languageReducer.isEn,
+});
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
   const {dispatch} = dispatchProps;
@@ -136,17 +163,17 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     ...stateProps,
   };
 };
-const BTN ={
-    zIndex:1,
-    height: 40,
-    borderRadius:10,
-    justifyContent:'center',
-    marginTop:25
-}
+const BTN = {
+  zIndex: 1,
+  height: 40,
+  borderRadius: 10,
+  justifyContent: 'center',
+  marginTop: 25,
+};
 const styles = StyleSheet.create({
   formGroup: {
     marginBottom: 10,
-    zIndex:100
+    zIndex: 100,
   },
   input: {
     height: 40,
@@ -162,19 +189,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 30,
   },
-  btnSubmit:{
+  btnSubmit: {
     ...BTN,
-    backgroundColor:"#006da9",
+    backgroundColor: '#006da9',
   },
-  btnClose:{
+  btnClose: {
     ...BTN,
-    backgroundColor:"#DC143C",
+    backgroundColor: '#DC143C',
   },
-  btnSubmitText:{
-    color :"#fff",
-    textAlign:'center',
-    fontWeight:'700'
-  }
+  btnSubmitText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontWeight: '700',
+  },
 });
 
 export default connect(mapStateToProps, undefined, mergeProps)(MenuPicker);

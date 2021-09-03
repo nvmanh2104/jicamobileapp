@@ -15,6 +15,7 @@
 		754C57335C6A8904140EA900 /* libPods-jicamobileapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FDF993CBBBFAD1D7687D83 /* libPods-jicamobileapp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8B012F8A26AAAABE00C62AD3 /* customTab.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B012F8926AAAABE00C62AD3 /* customTab.ttf */; };
+		8B06768926DB36D600BAF757 /* header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06768826DB36D600BAF757 /* header.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		7F5CB3E60C71BCED5EC1BFBF /* Pods-jicamobileapp-jicamobileappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jicamobileapp-jicamobileappTests.debug.xcconfig"; path = "Target Support Files/Pods-jicamobileapp-jicamobileappTests/Pods-jicamobileapp-jicamobileappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = jicamobileapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B012F8926AAAABE00C62AD3 /* customTab.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = customTab.ttf; path = ../resources/fonts/customTab.ttf; sourceTree = "<group>"; };
+		8B06768126DB368300BAF757 /* jicamobileapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jicamobileapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		8B06768826DB36D600BAF757 /* header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = header.swift; sourceTree = "<group>"; };
 		8EE5A9F3AC434124A386FCED /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		9135C37702954BFEBEA7CD61 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		96BC56AF1BC34F9094ECFA10 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				8B06768826DB36D600BAF757 /* header.swift */,
 			);
 			name = jicamobileapp;
 			sourceTree = "<group>";
@@ -152,6 +156,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				5FCD454661333B75DAD9B139 /* Pods */,
 				B4BE6676AA72472C98FF5894 /* Resources */,
+				8B06768126DB368300BAF757 /* jicamobileapp-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -250,7 +255,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -456,6 +461,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				8B06768926DB36D600BAF757 /* header.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F5CB3E60C71BCED5EC1BFBF /* Pods-jicamobileapp-jicamobileappTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -501,6 +508,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 26966E5A4ADE3F23BA307AB8 /* Pods-jicamobileapp-jicamobileappTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = jicamobileappTests/Info.plist;
@@ -543,6 +551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = jicamobileapp;
+				SWIFT_OBJC_BRIDGING_HEADER = "jicamobileapp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -570,6 +579,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = jicamobileapp;
+				SWIFT_OBJC_BRIDGING_HEADER = "jicamobileapp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

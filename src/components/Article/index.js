@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text ,Dimensions} from 'react-native';
 // import { Text } from 'react-native-elements';
 import { moment } from '../../utils/Omni';
 // import { cleanUpHtmlTag } from '../../utils/html';
 import { colorSet, fontSizeSet } from '../../AppStyles';
 import { log } from '../../utils/log'
+var {width, height} = Dimensions.get('window');
 
 export default class Article extends React.Component {
   render() {    
@@ -43,6 +44,7 @@ const styles = {
     borderWidth: 1,
     borderRadius: 7,
     overflow: 'hidden',
+    width:width*0.9,
     marginHorizontal: 10,
     marginVertical: 15,
     backgroundColor: colorSet.white,

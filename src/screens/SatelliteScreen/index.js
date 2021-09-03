@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Text, RefreshControl, View, SafeAreaView } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import { connect } from 'react-redux';
 
 import { actions as newsActions } from '../../redux/NewsRedux';
@@ -10,6 +10,7 @@ import Article from '../../components/Article';
 import { colorSet } from '../../AppStyles';
 import styles from './styles';
 import { log } from '../../utils/log';
+import { WebView } from 'react-native-webview';
 
 class SatelliteScreen extends React.Component {
   static navigationOptions = () => ({
@@ -50,10 +51,9 @@ class SatelliteScreen extends React.Component {
 
     return (
       <React.Fragment>
-        <View style={styles.container}>
-            <Text>Trang Satellite</Text>
-        </View>
-        {/* {isFetching ? <Spinner mode="overlay" /> : null} */}
+      <StatusBar barStyle="light-content"></StatusBar>
+      <View style={styles.header}></View>
+      <WebView style={styles.webview} source={{ uri: 'http://jica.weathervietnam.vn/mobilesatelite' }} />
       </React.Fragment>
     );
   }

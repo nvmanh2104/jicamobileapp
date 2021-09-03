@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { colorSet, fontSizeSet } from '../../AppStyles';
-
+import Device from '../../utils/Device'
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -9,7 +9,7 @@ export default StyleSheet.create({
   },
   header:{
     flexDirection:'row',
-    paddingTop:40,
+    paddingTop:Device.Window.height*0.06,
     paddingBottom:4,
     backgroundColor:'#1e88e5'
   },

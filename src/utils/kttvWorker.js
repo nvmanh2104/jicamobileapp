@@ -25,6 +25,7 @@ class KTTVWorker {
       'point.lat': `${location.latitude}`,
       'point.lon': `${location.longitude}`,
       apikey: '8fb3246c12d442525034be04bcd038f22e34571be4adbd4c',
+      'api-version':1.1
       // format: 'json',
       // zoom: 13,
       // 'accept-language': 'vi',
@@ -38,6 +39,7 @@ class KTTVWorker {
       location_bias_scale: 2,
       limit: 50,
       apikey: '8fb3246c12d442525034be04bcd038f22e34571be4adbd4c',
+      'api-version':1.1
       // limit: 50,
       // format: 'json',
       // countrycodes: 'vn',

@@ -84,7 +84,7 @@ class Maps extends React.Component {
 
 
   render() {
-    const {data, stations} = this.props;
+    const {data, stations,locationAdress} = this.props;
     var mergeList = stations.map(t1 => ({
       ...t1,
       ...data.find(t2 => t2.StationID === t1.StationID),
@@ -103,8 +103,8 @@ class Maps extends React.Component {
               position: 'absolute',
             }}
             initialRegion={{
-              latitude: LATITUDE,
-              longitude: LONGITUDE,
+              latitude: locationAdress[0].latitude,
+              longitude: locationAdress[0].longitude,
               latitudeDelta: LATITUDE_DELTA,
               longitudeDelta: LONGITUDE_DELTA,
             }}>
@@ -151,7 +151,9 @@ class Maps extends React.Component {
   }
 }
 
-const mapStateToProps = ({}) => ({});
+const mapStateToProps = ({locationReducer}) => ({
+  locationAdress:locationReducer.currentLocationReducer.currentLocation,
+});
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
   const {dispatch} = dispatchProps;
