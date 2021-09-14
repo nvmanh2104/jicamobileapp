@@ -15,7 +15,7 @@ import _IconIO from 'react-native-vector-icons/Ionicons';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 var {width, height} = Dimensions.get('window');
 
-class DateTime extends React.Component {
+class DateTime extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

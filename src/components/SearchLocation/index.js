@@ -9,7 +9,7 @@ import kttvWorker from '../../utils/kttvWorker';
 import { parseLocationAddress } from '../../utils/address';
 import { colorSet, styleSet ,fontSizeSet} from '../../AppStyles';
 import styles from './styles';
-class SearchLocation extends React.Component {
+class SearchLocation extends React.PureComponent {
   static navigationOptions = () => ({
     header: null,
   });
@@ -103,8 +103,8 @@ class SearchLocation extends React.Component {
     const { navigation } = this.props;
     const { currentLocations } = this.state;
     return (
-      <View style={{ flex: 1, backgroundColor: colorSet.white }}>
-        <View style={styleSet.transparentStatusBar} />
+      <View style={{ flex: 1, backgroundColor: 'white' }}>
+        {/* <View style={styleSet.transparentStatusBar} /> */}
         <SearchBar    
           onSearch={this.searchLocationDelayed}
           // onCancel={() => navigation.goBack()}

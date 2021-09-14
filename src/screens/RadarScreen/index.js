@@ -6,7 +6,7 @@ import { colorSet } from '../../AppStyles';
 import styles from './styles';
 import { WebView } from 'react-native-webview';
 
-class RadarScreen extends React.Component {
+class RadarScreen extends React.PureComponent {
   static navigationOptions = () => ({
     header: null,
   });

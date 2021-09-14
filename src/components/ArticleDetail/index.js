@@ -5,7 +5,7 @@ import WebView from '../WebView';
 import { Device } from '../../utils/Omni';
 import { colorSet, styleSet } from '../../AppStyles';
 
-export default class ArticleDetail extends React.Component {
+export default class ArticleDetail extends React.PureComponent {
   render() {
     const { article, isModalVisible, closeModal } = this.props;
     const { width: windowWidth, height: windowHeight } = Device.Window;

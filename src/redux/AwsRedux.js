@@ -31,6 +31,9 @@
     GET_DATA_1H_SUCCESS:'GET_DATA_1H_SUCCESS',
     GET_DATA_1H_FAILURE:'GET_DATA_1H_FAILURE',
 
+    
+    // CLOSE_LOADING_SCREEN:'CLOSE_LOADING_SCREEN',
+    
 
     
  };
@@ -47,7 +50,11 @@
       type:types.CLOSE_AWS_MODAL
     })
   },
-
+  closeLoadinScreen :()=>{
+    return ({
+      type:types.CLOSE_LOADING_SCREEN
+    })
+  },
    getStations: force => (dispatch, getState) => {
      const { aws: newsState } = getState();
      const { lastGetTime, isFetching } = newsState;
@@ -366,7 +373,33 @@
       default:
         return state;
     }
+
+    
   };
+  const initialLoadingScreen = {
+    isVisible: true,
+  };
+  
+   const loadingScreenReducer = (state = initialLoadingScreen, action) => {
+    const { type } = action;
+  
+    switch (type) {
+      case types.CLOSE_LOADING_SCREEN:
+        return {
+          ...state,
+          isVisible:false
+        };
+  
+      // case types.CLOSE_AWS_MODAL:
+      //   return {
+      //     ...state,
+      //     isVisible:false
+      //   };
+  
+     
+      default:
+        return state;
+    }
+  }
  
- 
- export const reducer= combineReducers({stationReducer,tableDataReducer,awsModalReducer,rain10mDataReducer,rain1hDataReducer})
+ export const reducer= combineReducers({stationReducer,tableDataReducer,awsModalReducer,rain10mDataReducer,rain1hDataReducer,loadingScreenReducer})

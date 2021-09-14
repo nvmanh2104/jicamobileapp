@@ -9,6 +9,7 @@ import { reducer as NetInfoReducer } from './NetInfoRedux';
 import { reducer as NewsReducer } from './NewsRedux';
 import {reducer as AwsReducer} from './AwsRedux'
 import {reducer as LocationReducer } from './LocationRedux'
+import {reducer as StatisticReducer} from './StatisticRedux'
 
 
 const config = {
@@ -21,5 +22,6 @@ export default persistCombineReducers(config, {
   weatherNews: NewsReducer,
   netInfo: NetInfoReducer,
   aws:AwsReducer,
-  locationReducer:LocationReducer
+  locationReducer:LocationReducer,
+  statistic:StatisticReducer
 });

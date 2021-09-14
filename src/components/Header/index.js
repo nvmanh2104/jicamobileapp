@@ -7,7 +7,7 @@ import {actions as locationActions} from '../../redux/LocationRedux';
 import ModalSetting from '../ModalSetting';
 import Device from '../../utils/Device';
 
-class Header extends React.Component {
+class Header extends React.PureComponent {
   
 
   constructor(props) {
@@ -41,7 +41,7 @@ class Header extends React.Component {
        
             <View style = {styles.backButonContainer}>
                 <View style={styles.buttonItem}>
-                <_IconIO name = "settings-outline" size ={30} style ={styles.dateIcon}onPress={this.openSetting} /> 
+                {/* <_IconIO name = "settings-outline" size ={30} style ={styles.dateIcon}onPress={this.openSetting} />  */}
                 </View>
             </View>
             

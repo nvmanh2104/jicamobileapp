@@ -4,8 +4,8 @@ import { colorSet, fontSizeSet } from '../../AppStyles';
 export default StyleSheet.create({
   container: {
     marginTop: 0,
-    paddingHorizontal: 15,
-    height:300,
+    paddingHorizontal: 20,
+    height:350,
     flexGrow: 0,
     
 

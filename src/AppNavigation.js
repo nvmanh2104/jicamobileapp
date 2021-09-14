@@ -11,13 +11,14 @@ import SatelliteScreen from './screens/SatelliteScreen';
 import StatisticsScreen from './screens/StatisticsScreen';
 import NewsScreen from './screens/NewsScreen';
 import NewsDetailScreen from './screens/NewsDetailScreen';
+import SettingsScreen from './screens/SettingsScreen';
 import Device from './utils/Device';
 // import {Platform} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import _IconIO from 'react-native-vector-icons/Ionicons';
 import CustomIcon from './components/BottomBarIcon'
 import settingLanguage from './utils/settingLanguage'
 
-Icon.loadFont();
+// Icon.loadFont();
 // const tabBarOptions =
 //   Platform.OS === 'ios'
 //     ? {
@@ -45,8 +46,12 @@ function NewsStack() {
   );
 }
 
+
+// const lazyPlaceholder = () => ()
+
 const Tabs = createBottomTabNavigator();
-class AppNavigation extends React.Component  {
+
+class AppNavigation extends React.PureComponent  {
   render(){
     return (
       <Tabs.Navigator
@@ -80,6 +85,7 @@ class AppNavigation extends React.Component  {
           }}
         />
         <Tabs.Screen name="Statistic" component={StatisticsScreen}
+        lazy={true}
          options={{
           tabBarLabel: this.props.language? settingLanguage.THONGKE.VIE:settingLanguage.THONGKE.EN,
           tabBarIcon: ({color}) => {
@@ -105,6 +111,13 @@ class AppNavigation extends React.Component  {
           tabBarLabel: this.props.language? settingLanguage.VETINH.VIE:settingLanguage.VETINH.EN,
           tabBarIcon: ({color}) => {
             return <CustomIcon name='satelliteWhite' size={25} color={color}/> 
+          },
+        }}/>
+         <Tabs.Screen name="Setting" component={SettingsScreen} 
+        options={{
+          tabBarLabel: this.props.language? settingLanguage.CAIDAT.VIE:settingLanguage.CAIDAT.EN,
+          tabBarIcon: ({color}) => {
+            return <_IconIO name = "settings-outline" size ={25} color={color}/> 
           },
         }}/>
         

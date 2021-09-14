@@ -11,7 +11,7 @@ import { colorSet } from '../../AppStyles';
 import styles from './styles';
 import { log } from '../../utils/log';
 
-class NewsScreen extends React.Component {
+class NewsScreen extends React.PureComponent {
   static navigationOptions = () => ({
     header: null,
   });

@@ -11,7 +11,7 @@ import _IconIO from 'react-native-vector-icons/Ionicons';
 import DropDownPicker from 'react-native-dropdown-picker'
 var {width, height} = Dimensions.get('window');
 
-class Dropdown extends React.Component {
+class Dropdown extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

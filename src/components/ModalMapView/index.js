@@ -9,7 +9,7 @@ import moment from 'moment'
 import {pad} from '../../utils/padd'
 import settingLanguage from '../../utils/settingLanguage'
 var {width, height} = Dimensions.get('window');
-class ModalMapView extends React.Component {
+class ModalMapView extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

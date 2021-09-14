@@ -24,7 +24,7 @@ const LONGITUDE = 105.84713; // Korea Town, New York, NY 10001
 const LATITUDE_DELTA = 4;
 const LONGITUDE_DELTA = LATITUDE_DELTA * (width / height);
 
-class Maps extends React.Component {
+class Maps extends React.PureComponent {
   static navigationOptions = () => ({
     header: null,
   });

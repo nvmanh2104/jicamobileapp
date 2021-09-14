@@ -16,7 +16,7 @@ import styles from './styles';
 import ArticleDetail from '../../components/ArticleDetail';
 
 
-class NewsDetailScreen extends React.Component {
+class NewsDetailScreen extends React.PureComponent {
   static navigationOptions = () => ({
     header: null,
   });

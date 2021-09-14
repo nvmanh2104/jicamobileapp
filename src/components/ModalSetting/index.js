@@ -4,116 +4,106 @@ import {
   View,
   Switch,
   FlatList,
+  KeyboardAvoidingView,
+  StatusBar,
 } from 'react-native';
 import {connect} from 'react-redux';
 import Modal from 'react-native-modal';
 import {actions as locationActions} from '../../redux/LocationRedux';
 import SearchLocation from '../SearchLocation';
-import Device from '../../utils/Device';
-import styles from './styles'
+import styles from './styles';
 import _IconIO from 'react-native-vector-icons/Ionicons';
 // import LocationSearchBar from '../LocationSearchBar'
-class ModalSetting extends React.Component {
+
+class ModalSetting extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      refresh:false
+      refresh: false,
     };
   }
 
   componentDidMount() {}
-  renderItem = ({ item, index }) => {
+  renderItem = ({item, index}) => {
     return (
       <View style={styles.locationItem}>
-      <Text style={styles.mainText}>{item.district}-{item.state}</Text>
-      <_IconIO name = "trash-outline" size ={25} style ={styles.dateIcon}onPress={() =>this.onRemoveLocation(item)} /> 
-    </View>
+        <Text style={styles.mainText}>
+          {item.district}-{item.state}
+        </Text>
+        <_IconIO
+          name="trash-outline"
+          size={25}
+          style={styles.dateIcon}
+          onPress={() => this.onRemoveLocation(item)}
+        />
+      </View>
     );
   };
 
-  onRemoveLocation =(location)=>{
-    this.props.removeLocation(location)
-  }
+  onRemoveLocation = location => {
+    this.props.removeLocation(location);
+  };
   render() {
-    console.log(this.props.savedLocation)
     return (
       <React.Fragment>
+        <StatusBar hidden={false} />
         <Modal
           backdropOpacity={0}
           isVisible={this.props.isVisible}
           onBackdropPress={this.props.closeSettingModal}
           animationIn="slideInLeft"
           animationOut="slideOutLeft"
-          style={{justifyContent: 'flex-end', margin: 0}}>
-          <View
-            style={{
-              backgroundColor: 'white',
-              width: Device.Window.width * 0.8,
-              height:  Device.Window.height * 0.9,
-              borderRadius: 4,
-              borderColor: 'rgba(0, 0, 0, 0.1)',
-            }}>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'flex-start',
-                marginTop: 10,
-                marginHorizontal: 15,
-              }}>
-              <Switch
-                style={{transform: [{scaleX: 0.8}, {scaleY: 0.8}]}}
-                value={this.props.language}
-                onValueChange={this.props.toggleLanguage}
-              />
-              <Text style={styles.textStyle}>
-                {this.props.language ? 'VIE' : 'EN'}
-              </Text>
-            </View>
-            <View style={{flex: 1,width:  Device.Window.width * 0.8-10,
-                height: Device.Window.height * 0.3}}>
-              <SearchLocation />
-            </View>
-            <View
-              style={{
-                width:  Device.Window.width * 0.8-10,
-                height: Device.Window.height * 0.5,
-                backgroundColor:'#f6f6f6',
-                margin:5,
-                borderRadius:3
-              }}>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  paddingHorizontal: 20,
-                }}>
-                <Text style={{fontSize: 18, fontWeight: '600'}}>
-                  Danh Sach Dia Diem Da Luu
+          style={styles.modalContainer}>
+          <KeyboardAvoidingView
+            behavior="padding"
+            pointerEvents="box-none"
+            style={{margin: 0, flex: 1, justifyContent: 'center'}}>
+            <View style={styles.conatiner}>
+              <View style={styles.switchContainer}>
+                <Switch
+                  style={styles.switch}
+                  value={this.props.language}
+                  onValueChange={this.props.toggleLanguage}
+                />
+                <Text style={styles.textStyle}>
+                  {this.props.language ? 'VIE' : 'EN'}
                 </Text>
               </View>
-              <FlatList
-               overScrollMode="never"
-               keyboardShouldPersistTaps="handled"
-              //  data={currentLocations}
-               renderItem={this.renderItem}
-               keyExtractor={(item, index) => `${item.key}_${index}`}
-                data={this.props.savedLocation}
-                style={{paddingTop:10}}
-                extraData={this.props}
-              />
+
+              <View style={styles.searchLocationContainer}>
+                <SearchLocation />
+              </View>
+
+              <View style={styles.savedLocationContainer}>
+                <View style={styles.savedTextContainer}>
+                  <Text style={styles.savedText}>
+                    Danh Sach Dia Diem Da Luu
+                  </Text>
+                </View>
+
+                <FlatList
+                  overScrollMode="never"
+                  keyboardShouldPersistTaps="handled"
+                  //  data={currentLocations}
+                  renderItem={this.renderItem}
+                  keyExtractor={(item, index) => `${item.key}_${index}`}
+                  data={this.props.savedLocation}
+                  style={styles.flatList}
+                  extraData={this.props}
+                />
+              </View>
             </View>
-          </View>
+          </KeyboardAvoidingView>
         </Modal>
       </React.Fragment>
     );
   }
 }
 
-const mapStateToProps = ({netInfo, locationReducer}) => ({
-  // netInfo,
+const mapStateToProps = ({locationReducer}) => ({
   isVisible: locationReducer.settingModalReducer.isVisible,
   language: locationReducer.languageReducer.isEn,
-  savedLocation :locationReducer.locationAdressReducer.savedLocations
+  savedLocation: locationReducer.locationAdressReducer.savedLocations,
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
@@ -128,7 +118,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     toggleLanguage: () => {
       dispatch(locationActions.toggleLanguage());
     },
-    removeLocation: (location) => {
+    removeLocation: location => {
       dispatch(locationActions.removeLocation(location));
     },
   };

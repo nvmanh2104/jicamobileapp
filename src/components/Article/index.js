@@ -7,7 +7,7 @@ import { colorSet, fontSizeSet } from '../../AppStyles';
 import { log } from '../../utils/log'
 var {width, height} = Dimensions.get('window');
 
-export default class Article extends React.Component {
+export default class Article extends React.PureComponent {
   render() {    
    
     const { title, categoryNew, updated_at } = this.props.article;

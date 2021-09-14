@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
 });
 
-class Back extends Component {
+class Back extends React.PureComponent {
   render() {
     const { navigation, onPress } = this.props;
 

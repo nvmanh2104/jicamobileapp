@@ -12,7 +12,7 @@ import styles from './styles';
 import { log } from '../../utils/log';
 import { WebView } from 'react-native-webview';
 
-class SatelliteScreen extends React.Component {
+class SatelliteScreen extends React.PureComponent {
   static navigationOptions = () => ({
     header: null,
   });

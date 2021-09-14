@@ -27,118 +27,120 @@ class Tables extends React.PureComponent {
   }
   //   const leftRef = useRef<ScrollView>(null);
   //   const rightRef = useRef<ScrollView>(null);
-  calculateRightHeader = (begin, end, interval) => {
-    var arrDt = [];
-    var hours = Math.floor(
-      (Math.ceil(
-        (moment(begin).minutes() + moment(begin).hours() * 60) / interval,
-      ) *
-        interval) /
-        60,
-    );
-    var minutes =
-      (Math.ceil(
-        (moment(begin).minutes() + moment(begin).hours() * 60) / interval,
-      ) *
-        interval) %
-      60;
-    var newbegin = '';
-    if (hours === 24) {
-      newbegin = moment(begin).add(1, 'd');
-      newbegin.hours(0);
-    } else {
-      newbegin = moment(begin).hours(hours);
-    }
-    newbegin.minutes(minutes);
-    newbegin.seconds(0);
-    var i = 0;
-    var arrend = moment(end);
-    arrDt.push(newbegin.format('MM-DD[\n]HH:mm'))
-    while (true) {
-      var next = newbegin.add(interval, 'm');
+  // calculateRightHeader = (begin, end, interval) => {
+  //   var tableHead = [];
+  //   var arrRightSize =[]
+  //   var hours = Math.floor(
+  //     (Math.ceil(
+  //       (moment(begin).minutes() + moment(begin).hours() * 60) / interval,
+  //     ) *
+  //       interval) /
+  //       60,
+  //   );
+  //   var minutes =
+  //     (Math.ceil(
+  //       (moment(begin).minutes() + moment(begin).hours() * 60) / interval,
+  //     ) *
+  //       interval) %
+  //     60;
+  //   var newbegin = '';
+  //   if (hours === 24) {
+  //     newbegin = moment(begin).add(1, 'd');
+  //     newbegin.hours(0);
+  //   } else {
+  //     newbegin = moment(begin).hours(hours);
+  //   }
+  //   newbegin.minutes(minutes);
+  //   newbegin.seconds(0);
+  //   var i = 0;
+  //   var arrend = moment(end);
+  //   tableHead.push(newbegin.format('MM-DD[\n]HH:mm'))
+  //   arrRightSize.push[60]
+  //   while (true) {
+  //     var next = newbegin.add(interval, 'm');
 
-      if (next > arrend) {
-        break;
-      }
-      if (i === 100) {
-        break;
-      }
-      i = i + 1;
-      arrDt.push(next.format('MM-DD[\n]HH:mm'));
-    }
-    return arrDt;
-  };
+  //     if (next > arrend) {
+  //       break;
+  //     }
+  //     if (i === 100) {
+  //       break;
+  //     }
+  //     i = i + 1;
+  //     tableHead.push(next.format('MM-DD[\n]HH:mm'));
+  //     arrRightSize.push[60]
+  //   }
+  //   return {tableHead,arrRightSize};
+  // };
 
-  calculateRightData = (StationIDs, jicaStations, tableHead, data) => {
-    var leftData = [];
-    var rightData = [];
+  // calculateRightData = (StationIDs, jicaStations, tableHead, data) => {
+  //   var leftData = [];
+  //   var rightData = [];
 
-    var myStations =StationIDs===null ?jicaStations:jicaStations.filter(x=> StationIDs.includes(x.StationID))
-    myStations.map(station => {
-        const rowData = [];
-        var obj = data.filter(x => x.StationID === station.StationID);
-        if (obj.length !== 0) {
-          leftData.push([
-            station.StationID,
-            station.StationName.EN,
-            obj[0].TotalRain,
-          ]);
-          //neu trong data co
+  //   var myStations =StationIDs===null ?jicaStations:jicaStations.filter(x=> StationIDs.includes(x.StationID))
+  //   myStations.map(station => {
+  //       const rowData = [];
+  //       var obj = data.filter(x => x.StationID === station.StationID);
+  //       //neu trong data co
+  //       if (obj.length !== 0) {
+  //         leftData.push([
+  //           station.StationID,
+  //           station.StationName.EN,
+  //           obj[0].TotalRain,
+  //         ]);
+          
 
-          tableHead.map(head => {
-            var arrObj = Object.entries(obj[0].Data)
-            // Object.keys(obj[0].Data).filter( key=> moment(key).format('MM-DD[\n]HH:mm') === head) 
-            var rs= arrObj.filter(([key, value]) => moment(key).format('MM-DD[\n]HH:mm') === head);
-            rs.length===0 ? rowData.push(''):rowData.push(rs[0][1].toFixed(1))
-            });
-        } else {
-          leftData.push([station.StationID, station.StationName.EN, '']);
-          tableHead.map(head => {
-            rowData.push('');
-          });
-        }
-
-        rightData.push(rowData);
-      });
+  //         tableHead.map(head => {
+  //           var arrObj = Object.entries(obj[0].Data)
+  //           // Object.keys(obj[0].Data).filter( key=> moment(key).format('MM-DD[\n]HH:mm') === head) 
+  //           var rs= arrObj.filter(([key, value]) => moment(key).format('MM-DD[\n]HH:mm') === head);
+  //           rs.length===0 ? rowData.push(''):rowData.push(rs[0][1].toFixed(1))
+  //           });
+  //       } else {
+  //         leftData.push([station.StationID, station.StationName.EN, '']);
+  //         tableHead.map(head => {
+  //           rowData.push('');
+  //         });
+  //       }
+  //       rightData.push(rowData);
+     
+  //     });
     
-    return {leftData, rightData};
+  //   return {leftData, rightData};
 
-    // else{
-    //   StationIDs.map(station =>{
-    //     var obj = jicaStations.filter(x=>x.StationID===station)
-    //     leftData.push([obj.StationID,obj.StationName.EN,obj.TotalRain]);
-    //     const rowData = [];
-    //     Object.keys(obj.data).map(function(key, index) {
-    //       tableHead.map(head =>{
-    //         if(moment(key).format('MM-DD[\n]HH:mm')===head){
-    //           rowData.push(data[key].toFixed(1))
-    //         }
-    //       })
-    //     });
-    //     rightData.push(rowData)
-    //   })
-    // }
-  };
+  //   // else{
+  //   //   StationIDs.map(station =>{
+  //   //     var obj = jicaStations.filter(x=>x.StationID===station)
+  //   //     leftData.push([obj.StationID,obj.StationName.EN,obj.TotalRain]);
+  //   //     const rowData = [];
+  //   //     Object.keys(obj.data).map(function(key, index) {
+  //   //       tableHead.map(head =>{
+  //   //         if(moment(key).format('MM-DD[\n]HH:mm')===head){
+  //   //           rowData.push(data[key].toFixed(1))
+  //   //         }
+  //   //       })
+  //   //     });
+  //   //     rightData.push(rowData)
+  //   //   })
+  //   // }
+  // };
 
   render() {
-    const {isFetching, stations, data, header} = this.props;
-    var tableHead = this.calculateRightHeader(
-      header.DateTimeFrom,
-      header.DateTimeTo,
-      header.Interval,
-    );
-    var arrRightSize =[]
-   for (var i =0;i<=tableHead.length;i++){
-    arrRightSize.push[60]
-   }
-    let jicaStations =
-      stations.length !== 0 ? stations.filter(x => x.Project === 'JICA') : [];
-    var {leftData, rightData} = this.calculateRightData(
-      header.StationIDs,
-      jicaStations,
-      tableHead,
-      data,
-    );
+     const {tableHead,arrRightSize,leftData,rightData} = this.props;
+    // const {isFetching, stations, data, header} = this.props;
+    // var {tableHead ,arrRightSize}= this.calculateRightHeader(
+    //   header.DateTimeFrom,
+    //   header.DateTimeTo,
+    //   header.Interval,
+    // );
+ 
+    // let jicaStations =
+    //   stations.length !== 0 ? stations.filter(x => x.Project === 'JICA') : [];
+    // var {leftData, rightData} = this.calculateRightData(
+    //   header.StationIDs,
+    //   jicaStations,
+    //   tableHead,
+    //   data,
+    // );
   
     // const recordData = [];
     // for (let i = 0; i < jicaStations.length; i += 1) {
@@ -154,7 +156,7 @@ class Tables extends React.PureComponent {
     //   }
     //   tableData.push(rowData);
     // }
-
+    
     return (
       <View
         style={{
@@ -264,8 +266,8 @@ const mapStateToProps = ({netInfo, aws,locationReducer}) => ({
   // netInfo,
   //   isFetching: weatherNews.isFetching,
   //   news: weatherNews.news,
-  stations: aws.stationReducer.stations,
-  data: aws.tableDataReducer.data,
+  // stations: aws.stationReducer.stations,
+  // data: aws.tableDataReducer.data,
   language: locationReducer.languageReducer.isEn,
 });
 

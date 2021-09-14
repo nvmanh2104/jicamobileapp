@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\project\\react-native\\jicamobileapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\manh.ngovan\\.gradle\\caches\\transforms-2\\files-2.1\\f03ec885b8fabdebb4f0d3bbade5009e\\core-1.3.2\\res\\values-v16\\values-v16.xml",
+                    "source": "/Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f69fa49579a4c7c4f32d7232fd155705/core-1.3.2/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\manh.ngovan\\.gradle\\caches\\transforms-2\\files-2.1\\d14dbad7340cad958a2e361a440b498d\\appcompat-1.1.0\\res\\values-v16\\values-v16.xml",
+                    "source": "/Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/b01084aab3182efa642594888b7bd470/appcompat-1.1.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

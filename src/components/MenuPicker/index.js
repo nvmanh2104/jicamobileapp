@@ -28,7 +28,7 @@ const DismissKeyboardHOC = Comp => {
 };
 const DismissKeyboardView = DismissKeyboardHOC(View);
 
-class MenuPicker extends React.Component {
+class MenuPicker extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {};

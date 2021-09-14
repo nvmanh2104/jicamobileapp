@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>312777646648-2j3186mi4n5vr8jeb0mgemkkjhg1mgdd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.312777646648-2j3186mi4n5vr8jeb0mgemkkjhg1mgdd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD700GuGqB_Su1s6ZQeAQVu0mq5ppaknaU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>312777646648</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.jicamobileapp</string>
+	<key>PROJECT_ID</key>
+	<string>jicamobile</string>
+	<key>STORAGE_BUCKET</key>
+	<string>jicamobile.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:312777646648:ios:9f5dac34d1a68f67197ccd</string>
+</dict>
+</plist>

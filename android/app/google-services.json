@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "187727195897",
-    "project_id": "jicamobileapp",
-    "storage_bucket": "jicamobileapp.appspot.com"
+    "project_number": "312777646648",
+    "project_id": "jicamobile",
+    "storage_bucket": "jicamobile.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:187727195897:android:21fe3c86ec4236dd693c28",
+        "mobilesdk_app_id": "1:312777646648:android:e9d4e4b049fa9615197ccd",
         "android_client_info": {
           "package_name": "vn.weathervietnam.jicamobileapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "187727195897-7arnd125bbm016rvn5b8frceu1t6mt1b.apps.googleusercontent.com",
+          "client_id": "312777646648-0hgnka1mu4niom5pl74v215kjblr3tr5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCZFYgeDsUYoWb44CGEI95m_UBSqJ3ujo0"
+          "current_key": "AIzaSyDw8SpU2fAptiSaQ5rXZfyXL_9-419BALw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "187727195897-7arnd125bbm016rvn5b8frceu1t6mt1b.apps.googleusercontent.com",
+              "client_id": "312777646648-0hgnka1mu4niom5pl74v215kjblr3tr5.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "312777646648-2j3186mi4n5vr8jeb0mgemkkjhg1mgdd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.jicamobileapp"
+              }
             }
           ]
         }

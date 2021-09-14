@@ -2,14 +2,15 @@ import React from 'react';
 import {Text, View, StatusBar} from 'react-native';
 import {connect} from 'react-redux';
 import moment from 'moment';
-import {actions as newsActions} from '../../redux/NewsRedux';
+import { actions as statisticAction } from '../../redux/StatisticRedux';
 import MenuPicker from '../../components/MenuPicker';
-import {actions as awsAction} from '../../redux/AwsRedux';
+// import {actions as awsAction} from '../../redux/AwsRedux';
 import styles from './styles';
 
 import _IconIO from 'react-native-vector-icons/Ionicons';
 import Tables from '../../components/Tables';
 import settingLanguage from '../../utils/settingLanguage';
+// import Spinner from 'react-native-loading-spinner-overlay';
 class StatisticScreen extends React.Component {
   static navigationOptions = () => ({
     header: null,
@@ -26,20 +27,31 @@ class StatisticScreen extends React.Component {
         DateTimeTo: moment().format('YYYY-MM-DDTHH:mm'),
         Interval: 10,
       },
+      // isLoading:true
     };
   }
-
-  componentDidMount() {
-    // const { navigation, getWeatherNews } = this.props;
-    // this._navListener = navigation.addListener('focus', () => {
-    //   getWeatherNews();
-    //});
+  getFirstData = ()=>{
+    var DateTimeTo = moment("2021-04-26T00:00:00").format("YYYY-MM-DD") + 'T00:00:00'
+    var DateTimeFrom = moment("2021-04-26T00:00:00").add(-1,'d').format("YYYY-MM-DD") + 'T00:00:00'
+    var Interval =60
+    this.props.getMobileTable({StationIDs:null,Interval,DateTimeFrom,DateTimeTo})
   }
 
-  onRefresh = () => {
-    // this.props.getWeatherNews(true);
-  };
+   
+  componentDidMount() {
+   
+    this.getFirstData();
+  }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.data !== nextProps.data) {
+      return true;
+    }
+    if (this.state.isVisible !== nextState.isVisible || this.state.values !== nextState.values) {
+      return true;
+    }
+    return false;
+  }
   closeModal = () => {
     this.setState({isVisible: false});
   };
@@ -57,9 +69,32 @@ class StatisticScreen extends React.Component {
   };
 
   render() {
+    
+    const { data} = this.props;
+      var arrRightSize =[]
+      var tableHead =[]
+      var leftData=[]
+      var rightData =[]
+
+      if(data.length!==0){
+        for(var i =0;i<data.Header.length;i++){
+          arrRightSize.push[60]
+         }
+         tableHead = data.Header
+         leftData=data.TotalRain
+         rightData = data.RainData
+
+      }
+     
     return (
       <React.Fragment>
+       
         <StatusBar barStyle="light-content"></StatusBar>
+        {/* <Spinner
+          visible={isLoading}
+          textContent={'Loading...'}
+          
+        /> */}
         <View style={styles.header}>
           <View style={styles.labelContainer}>
             <_IconIO
@@ -89,18 +124,24 @@ class StatisticScreen extends React.Component {
             closeModal={this.closeModal}
             onSubmitForm={this.onSubmitForm}
           />
-          <Tables header={this.state.values}></Tables>
-        </View>
-        {/* {isFetching ? <Spinner mode="overlay" /> : null} */}
+          {/* <Tables header={this.state.values}></Tables> */}
+          <Tables tableHead={tableHead}
+          arrRightSize={arrRightSize}
+          leftData={leftData}
+          rightData={rightData}
+          ></Tables>
+        </View> 
       </React.Fragment>
     );
   }
 }
 
-const mapStateToProps = ({netInfo, locationReducer}) => ({
-  // netInfo,
-  //   isFetching: weatherNews.isFetching,
+const mapStateToProps = ({netInfo, statistic,locationReducer}) => ({
+
   language: locationReducer.languageReducer.isEn,
+  // stations: aws.stationReducer.stations,
+  data: statistic.tableDataReducer.data,
+
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
@@ -109,8 +150,8 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return {
     ...ownProps,
     ...stateProps,
-    getDataTable: params => {
-      dispatch(awsAction.getDataTable(params));
+    getMobileTable: params => {
+      dispatch(statisticAction.getMobileTable(params));
     },
   };
 };

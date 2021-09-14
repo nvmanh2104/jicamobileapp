@@ -81,7 +81,10 @@ class KTTVWorker {
     
     return this.get('/rain/rain1h', { params });
   }
-
+  getMobileTable(params) {
+    
+    return this.get('/rain/total_rain_mobile', { params });
+  }
 
 
 

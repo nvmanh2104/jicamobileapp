@@ -106,5 +106,12 @@ export default {
     DAYAGO:{
         EN:'Days ago',
         VIE:"ngày trước"
+    },
+
+
+    //----settingscreen
+    CAIDAT:{
+      EN:'Settings',
+      VIE:'Cài đặt'
     }
 };
