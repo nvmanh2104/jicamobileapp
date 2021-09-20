@@ -64,5 +64,13 @@ get from api with all saved location and current location
 
 
 
-chose 
+-------logic notification ---------
+--menu news chose
+-get news from api
+-check isread in localstorage if null or false -> fire notification -> set isread true
+- save localstorage
+
+
+--15 mins call api
+ do the same
 

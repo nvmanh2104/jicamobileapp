@@ -25,6 +25,8 @@ import com.reactnativecommunity.netinfo.NetInfoPackage;
 import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
 // @react-native-firebase/messaging
 import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
+// react-native-background-fetch
+import com.transistorsoft.rnbackgroundfetch.RNBackgroundFetchPackage;
 // react-native-fast-image
 import com.dylanvann.fastimage.FastImageViewPackage;
 // react-native-flipper
@@ -35,6 +37,8 @@ import com.agontuk.RNFusedLocation.RNFusedLocationPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-maps
 import com.airbnb.android.react.maps.MapsPackage;
+// react-native-push-notification
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-safe-area-context
@@ -99,11 +103,13 @@ public class PackageList {
       new NetInfoPackage(),
       new ReactNativeFirebaseAppPackage(),
       new ReactNativeFirebaseMessagingPackage(),
+      new RNBackgroundFetchPackage(),
       new FastImageViewPackage(),
       new FlipperPackage(),
       new RNFusedLocationPackage(),
       new RNGestureHandlerPackage(),
       new MapsPackage(),
+      new ReactNativePushNotificationPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),

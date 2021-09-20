@@ -213,7 +213,7 @@ dependencies {
         implementation jscFlavor
     }
     // Enable google analytics for app
-  implementation 'com.google.firebase:firebase-analytics:19.0.0'.
+  implementation 'com.google.firebase:firebase-analytics:19.0.0'
 
   // Enable direct boot mode message handling in your app
   implementation 'com.google.firebase:firebase-messaging-directboot:20.2.0'

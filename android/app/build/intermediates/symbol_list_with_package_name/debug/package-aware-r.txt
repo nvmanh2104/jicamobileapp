@@ -1034,6 +1034,7 @@ color peru
 color pink
 color plum
 color powderblue
+color primary_dark
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark

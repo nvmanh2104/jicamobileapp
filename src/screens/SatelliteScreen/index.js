@@ -27,20 +27,14 @@ class SatelliteScreen extends React.PureComponent {
   }
 
   componentDidMount() {
-    // const { navigation, getWeatherNews } = this.props;    
-    // this._navListener = navigation.addListener('focus', () => {
-    //   getWeatherNews();
-    //});
+
   }
 
   onRefresh = () => {
-    // this.props.getWeatherNews(true);
+    
   };
 
-  goToNewsDetails = news => {
-    // const { navigation } = this.props;
-    // navigation.navigate('NewsDetailScreen', { article: news });
-  };
+ 
 
 //   renderItem = ({ item, index }) => {
 //     return <Article article={item} openNews={() => this.goToNewsDetails(item)} />;
@@ -60,9 +54,7 @@ class SatelliteScreen extends React.PureComponent {
 }
 
 const mapStateToProps = ({ netInfo, weatherNews }) => ({
-  // netInfo,
-//   isFetching: weatherNews.isFetching,
-//   news: weatherNews.news,
+ 
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
@@ -71,9 +63,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return {
     ...ownProps,
     ...stateProps,
-    // getWeatherNews: (force = false) => {
-    //   dispatch(newsActions.getWeatherNews(force));
-    // },
+    
   };
 };
 

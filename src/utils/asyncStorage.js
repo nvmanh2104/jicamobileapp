@@ -10,6 +10,6 @@ export const getStoredItem = (key, needParse = true) => {
 };
 
 export const setStoredItem = (key, value, needStringify = true) => {
-  const newValue = needStringify ? JSON.stringify({ ...value, time: Date.now() }) : value;
+  const newValue = needStringify ? JSON.stringify({ ...value}) : value;
   return AsyncStorage.setItem(key, newValue).catch(() => {});
 };

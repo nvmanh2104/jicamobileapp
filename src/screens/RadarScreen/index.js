@@ -24,7 +24,7 @@ class RadarScreen extends React.PureComponent {
   }
 
   onRefresh = () => {
-    // this.props.getWeatherNews(true);
+    
   };
 
   
@@ -53,9 +53,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return {
     ...ownProps,
     ...stateProps,
-    // getWeatherNews: (force = false) => {
-    //   dispatch(newsActions.getWeatherNews(force));
-    // },
+   
   };
 };
 

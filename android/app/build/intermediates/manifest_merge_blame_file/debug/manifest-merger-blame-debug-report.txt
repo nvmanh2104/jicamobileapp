@@ -12,338 +12,535 @@
 11-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/debug/AndroidManifest.xml:5:5-77
 11-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/debug/AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:4:5-67
-12-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:4:22-64
+12-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:4:1-63
+12-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:4:18-60
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 13-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:5:1-77
 13-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:5:18-74
 14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 14-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:6:1-75
 14-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:6:18-72
-15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-15-->[com.facebook.flipper:flipper:0.75.1] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/dd32a0883f699b9d4cee9a063eb5abff/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
-15-->[com.facebook.flipper:flipper:0.75.1] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/dd32a0883f699b9d4cee9a063eb5abff/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
-16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->[:react-native-community_netinfo] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
-16-->[:react-native-community_netinfo] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-76
-17    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-17-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
-17-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
-18    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-18-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:5-82
-18-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:22-79
-19
-20    <uses-feature
-20-->[com.google.android.gms:play-services-maps:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/e28f68e116f5f2cf7fa7858d1c948af6/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
-21        android:glEsVersion="0x00020000"
-21-->[com.google.android.gms:play-services-maps:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/e28f68e116f5f2cf7fa7858d1c948af6/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
-22        android:required="true" />
-22-->[com.google.android.gms:play-services-maps:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/e28f68e116f5f2cf7fa7858d1c948af6/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
-23
-24    <application
-24-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:7:5-31:19
-25        android:name="vn.weathervietnam.jicamobileapp.MainApplication"
-25-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:8:7-38
-26        android:allowBackup="false"
-26-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:12:7-34
-27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-27-->[androidx.core:core:1.3.2] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f69fa49579a4c7c4f32d7232fd155705/core-1.3.2/AndroidManifest.xml:24:18-86
-28        android:debuggable="true"
-29        android:icon="@mipmap/ic_launcher"
-29-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:10:7-41
-30        android:label="@string/app_name"
-30-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:9:7-39
-31        android:roundIcon="@mipmap/ic_launcher_round"
-31-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:11:7-52
-32        android:theme="@style/AppTheme"
-32-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:13:7-38
-33        android:usesCleartextTraffic="true" >
-33-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/debug/AndroidManifest.xml:8:9-44
-34        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-34-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/debug/AndroidManifest.xml:11:9-86
-34-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/debug/AndroidManifest.xml:11:19-83
-35
-36        <meta-data
-36-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:14:7-16:63
-37            android:name="com.google.android.geo.API_KEY"
-37-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:15:6-51
-38            android:value="AIzaSyAoYtl0rUUnnMk8AYjQjsIFN0qqzGc0Yb0" /> <!-- You will also only need to add this uses-library tag -->
-38-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:16:6-61
-39        <uses-library
-39-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:19:4-82
-40            android:name="org.apache.http.legacy"
-40-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:19:18-55
-41            android:required="false" />
-41-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:19:56-80
-42
-43        <activity
-43-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:20:7-30:18
-44            android:name="vn.weathervietnam.jicamobileapp.MainActivity"
-44-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:21:9-37
-45            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-45-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:23:9-86
-46            android:label="@string/app_name"
-46-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:22:9-41
-47            android:launchMode="singleTask"
-47-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:24:9-40
-48            android:windowSoftInputMode="adjustPan" >
-48-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:25:9-48
-49            <intent-filter>
-49-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:26:9-29:25
-50                <action android:name="android.intent.action.MAIN" />
-50-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:27:13-65
-50-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:27:21-62
-51
-52                <category android:name="android.intent.category.LAUNCHER" />
-52-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:28:13-73
-52-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:28:23-70
-53            </intent-filter>
-54        </activity>
-55
-56        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
-56-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-111
-56-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:18-108
-57        <service
-57-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-23:19
-58            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
-58-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-95
-59            android:exported="false" >
-59-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-37
-60            <intent-filter>
-60-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-22:29
-61                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-61-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:17-78
-61-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:25-75
-62            </intent-filter>
-63        </service>
-64
-65        <receiver
-65-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:9-32:20
-66            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
-66-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-96
-67            android:exported="true"
-67-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:13-36
-68            android:permission="com.google.android.c2dm.permission.SEND" >
-68-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-73
-69            <intent-filter>
-69-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-31:29
-70                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-70-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:17-81
-70-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:25-78
-71            </intent-filter>
-72        </receiver>
-73
-74        <meta-data
-74-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:34:9-36:36
-75            android:name="firebase_messaging_auto_init_enabled"
-75-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:13-64
-76            android:value="true" />
-76-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:36:13-33
-77        <meta-data
-77-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:9-39:32
-78            android:name="com.google.firebase.messaging.default_notification_channel_id"
-78-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:38:13-89
-79            android:value="" />
-79-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:39:13-29
-80        <meta-data
-80-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:40:9-42:47
-81            android:name="com.google.firebase.messaging.default_notification_color"
-81-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:41:13-84
-82            android:resource="@color/white" />
-82-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:42:13-44
-83        <meta-data
-83-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:36
-84            android:name="app_data_collection_default_enabled"
-84-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-63
-85            android:value="true" />
-85-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-33
-86
-87        <service
-87-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-20:19
-88            android:name="com.google.firebase.components.ComponentDiscoveryService"
-88-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:18-89
-89            android:directBootAware="true"
-89-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
-90            android:exported="false" >
-90-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:51:13-37
-91            <meta-data
-91-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:85
-92                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
-92-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-120
-93                android:value="com.google.firebase.components.ComponentRegistrar" />
-93-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-82
-94            <meta-data
-94-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:52:13-54:85
-95                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-95-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:53:17-119
-96                android:value="com.google.firebase.components.ComponentRegistrar" />
-96-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:54:17-82
-97            <meta-data
-97-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3e3d8e29f45b11a37752a9a3a688f408/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:28:13-30:85
-98                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-98-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3e3d8e29f45b11a37752a9a3a688f408/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:29:17-115
-99                android:value="com.google.firebase.components.ComponentRegistrar" />
-99-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3e3d8e29f45b11a37752a9a3a688f408/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:30:17-82
-100            <meta-data
-100-->[com.google.firebase:firebase-installations:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f18ed37a2f4c43a6bb6a4d6fdbabaff5/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
-101                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-101-->[com.google.firebase:firebase-installations:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f18ed37a2f4c43a6bb6a4d6fdbabaff5/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
-102                android:value="com.google.firebase.components.ComponentRegistrar" />
-102-->[com.google.firebase:firebase-installations:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f18ed37a2f4c43a6bb6a4d6fdbabaff5/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
-103        </service>
+15    <uses-permission android:name="android.permission.VIBRATE" />
+15-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:7:1-62
+15-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:7:18-59
+16    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+16-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:8:1-76
+16-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:8:18-74
+17    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+17-->[com.facebook.flipper:flipper:0.75.1] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/dd32a0883f699b9d4cee9a063eb5abff/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
+17-->[com.facebook.flipper:flipper:0.75.1] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/dd32a0883f699b9d4cee9a063eb5abff/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->[:react-native-community_netinfo] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
+18-->[:react-native-community_netinfo] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-76
+19    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+19-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
+19-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
+20    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+20-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:5-82
+20-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:22-79
+21
+22    <uses-feature
+22-->[com.google.android.gms:play-services-maps:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/e28f68e116f5f2cf7fa7858d1c948af6/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+23        android:glEsVersion="0x00020000"
+23-->[com.google.android.gms:play-services-maps:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/e28f68e116f5f2cf7fa7858d1c948af6/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+24        android:required="true" />
+24-->[com.google.android.gms:play-services-maps:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/e28f68e116f5f2cf7fa7858d1c948af6/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+25
+26    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+26-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:26:5-110
+26-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:26:22-107
+27    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- for android -->
+27-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:13:5-68
+27-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:13:22-65
+28    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+29    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+30    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+31    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+32    <!-- for Samsung -->
+33    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+33-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:5-86
+33-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:22-83
+34    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+34-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:5-87
+34-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:22-84
+35    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+35-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:5-81
+35-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:22-78
+36    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+36-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:5-83
+36-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:22-80
+37    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+37-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:5-88
+37-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:22-85
+38    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
+38-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:5-92
+38-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:22-89
+39    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+39-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:5-84
+39-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:22-81
+40    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
+40-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:5-83
+40-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:22-80
+41    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+41-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:5-91
+41-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:22-88
+42    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+42-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:5-92
+42-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:22-89
+43    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
+43-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:5-93
+43-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:22-90
+44    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- for OPPO -->
+44-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:5-73
+44-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:22-70
+45    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+45-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:5-82
+45-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:22-79
+46    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- for EvMe -->
+46-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:5-83
+46-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:22-80
+47    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+47-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:5-88
+47-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:22-85
+48    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+48-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:5-89
+48-->[me.leolin:ShortcutBadger:1.1.22] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/1d4ea1f7bcaefbe8f114e9b0c5fee7d2/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:22-86
+49
+50    <application
+50-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:9:5-58:19
+51        android:name="vn.weathervietnam.jicamobileapp.MainApplication"
+51-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:10:7-38
+52        android:allowBackup="false"
+52-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:14:7-34
+53        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+53-->[androidx.core:core:1.3.2] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f69fa49579a4c7c4f32d7232fd155705/core-1.3.2/AndroidManifest.xml:24:18-86
+54        android:debuggable="true"
+55        android:icon="@mipmap/ic_launcher"
+55-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:12:7-41
+56        android:label="@string/app_name"
+56-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:11:7-39
+57        android:roundIcon="@mipmap/ic_launcher_round"
+57-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:13:7-52
+58        android:theme="@style/AppTheme"
+58-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:15:7-38
+59        android:usesCleartextTraffic="true" >
+59-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/debug/AndroidManifest.xml:8:9-44
+60        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+60-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/debug/AndroidManifest.xml:11:9-86
+60-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/debug/AndroidManifest.xml:11:19-83
+61
+62        <meta-data
+62-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:16:7-18:63
+63            android:name="com.google.android.geo.API_KEY"
+63-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:17:6-51
+64            android:value="AIzaSyAoYtl0rUUnnMk8AYjQjsIFN0qqzGc0Yb0" />
+64-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:18:6-61
+65        <meta-data
+65-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:19:6-20:26
+66            android:name="com.dieam.reactnativepushnotification.notification_foreground"
+66-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:19:17-93
+67            android:value="false" /> <!-- Change the resource name to your App's accent color - or any other color you want -->
+67-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:20:3-24
+68        <meta-data
+68-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:22:3-23:36
+69            android:name="com.dieam.reactnativepushnotification.notification_color"
+69-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:22:14-85
+70            android:resource="@color/white" /> <!-- or @android:color/{name} to use a standard color -->
+70-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:23:3-34
+71        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationActions" />
+71-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:25:3-102
+71-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:25:13-99
+72        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher" />
+72-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:26:3-104
+72-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:26:13-101
+73        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver" >
+73-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:27:3-33:14
+73-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:27:13-109
+74            <intent-filter>
+74-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:28:5-32:21
+75                <action android:name="android.intent.action.BOOT_COMPLETED" />
+75-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:29:7-69
+75-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:29:15-66
+76                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+76-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:30:7-72
+76-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:30:15-69
+77                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+77-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:31:7-71
+77-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:31:15-69
+78            </intent-filter>
+79        </receiver> <!-- android:directBootAware="true" to enable direct boot mode message handling in your app -->
+80        <service
+80-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:35:3-43:13
+81            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
+81-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:36:5-99
+82            android:directBootAware="true"
+82-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:38:5-35
+83            android:exported="false" >
+83-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:37:5-29
+84            <intent-filter>
+84-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:40:5-42:21
+85                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+85-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:41:7-68
+85-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:41:15-65
+86            </intent-filter>
+87        </service> <!-- You will also only need to add this uses-library tag -->
+88        <uses-library
+88-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:46:4-82
+89            android:name="org.apache.http.legacy"
+89-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:46:18-55
+90            android:required="false" />
+90-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:46:56-80
+91
+92        <activity
+92-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:47:7-57:18
+93            android:name="vn.weathervietnam.jicamobileapp.MainActivity"
+93-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:48:9-37
+94            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+94-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:50:9-86
+95            android:label="@string/app_name"
+95-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:49:9-41
+96            android:launchMode="singleTask"
+96-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:51:9-40
+97            android:windowSoftInputMode="adjustPan" >
+97-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:52:9-48
+98            <intent-filter>
+98-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:53:9-56:25
+99                <action android:name="android.intent.action.MAIN" />
+99-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:54:13-65
+99-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:54:21-62
+100
+101                <category android:name="android.intent.category.LAUNCHER" />
+101-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:55:13-73
+101-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:55:23-70
+102            </intent-filter>
+103        </activity>
 104
-105        <provider
-105-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:9-26:38
-106            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
-106-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-88
-107            android:authorities="vn.weathervietnam.jicamobileapp.reactnativefirebaseappinitprovider"
-107-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-86
-108            android:exported="false"
-108-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-37
-109            android:initOrder="99" />
-109-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-35
-110        <provider
-110-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
-111            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-111-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
-112            android:authorities="vn.weathervietnam.jicamobileapp.fileprovider"
-112-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
-113            android:exported="false"
-113-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
-114            android:grantUriPermissions="true" >
-114-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
-115            <meta-data
-115-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
-116                android:name="android.support.FILE_PROVIDER_PATHS"
-116-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
-117                android:resource="@xml/file_provider_paths" />
-117-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
-118        </provider>
-119
-120        <receiver
-120-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:28:9-35:20
-121            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-121-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:29:13-78
-122            android:exported="true"
-122-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:30:13-36
-123            android:permission="com.google.android.c2dm.permission.SEND" >
-123-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:31:13-73
-124            <intent-filter>
-124-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-31:29
-125                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-125-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:17-81
-125-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:25-78
-126            </intent-filter>
-127        </receiver>
-128        <!--
-129             FirebaseMessagingService performs security checks at runtime,
-130             but set to not exported to explicitly avoid allowing another app to call it.
-131        -->
-132        <service
-132-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:41:9-48:19
-133            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-133-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:42:13-82
-134            android:directBootAware="true"
-134-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:43:13-43
-135            android:exported="false" >
-135-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:44:13-37
-136            <intent-filter android:priority="-500" >
-136-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-22:29
-137                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-137-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:17-78
-137-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:25-75
-138            </intent-filter>
-139        </service>
-140        <service
-140-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
-141            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-141-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:30:13-103
-142            android:exported="false" >
-142-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:31:13-37
+105        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
+105-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-111
+105-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:18-108
+106        <service
+106-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-23:19
+107            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
+107-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-95
+108            android:exported="false" >
+108-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-37
+109            <intent-filter>
+109-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:40:5-42:21
+110                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+110-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:41:7-68
+110-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:41:15-65
+111            </intent-filter>
+112        </service>
+113
+114        <receiver
+114-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:9-32:20
+115            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
+115-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-96
+116            android:exported="true"
+116-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:13-36
+117            android:permission="com.google.android.c2dm.permission.SEND" >
+117-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-73
+118            <intent-filter>
+118-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-31:29
+119                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+119-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:17-81
+119-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:25-78
+120            </intent-filter>
+121        </receiver>
+122
+123        <meta-data
+123-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:34:9-36:36
+124            android:name="firebase_messaging_auto_init_enabled"
+124-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:13-64
+125            android:value="true" />
+125-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:36:13-33
+126        <meta-data
+126-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:9-39:32
+127            android:name="com.google.firebase.messaging.default_notification_channel_id"
+127-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:38:13-89
+128            android:value="" />
+128-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:39:13-29
+129        <meta-data
+129-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:40:9-42:47
+130            android:name="com.google.firebase.messaging.default_notification_color"
+130-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:41:13-84
+131            android:resource="@color/white" />
+131-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:42:13-44
+132        <meta-data
+132-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:36
+133            android:name="app_data_collection_default_enabled"
+133-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-63
+134            android:value="true" />
+134-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-33
+135
+136        <service
+136-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-20:19
+137            android:name="com.google.firebase.components.ComponentDiscoveryService"
+137-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:18-89
+138            android:directBootAware="true"
+138-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+139            android:exported="false" >
+139-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:51:13-37
+140            <meta-data
+140-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:85
+141                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
+141-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-120
+142                android:value="com.google.firebase.components.ComponentRegistrar" />
+142-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-82
 143            <meta-data
-143-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:32:13-34:39
-144                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-144-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:33:17-94
-145                android:value="cct" />
-145-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:34:17-36
-146        </service>
-147        <service
-147-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:26:9-30:19
-148            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-148-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:27:13-117
-149            android:exported="false"
-149-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:28:13-37
-150            android:permission="android.permission.BIND_JOB_SERVICE" >
-150-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:29:13-69
-151        </service>
-152
-153        <receiver
-153-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:32:9-34:40
-154            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-154-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:33:13-132
-155            android:exported="false" />
-155-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:34:13-37
+143-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:52:13-54:85
+144                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+144-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:53:17-119
+145                android:value="com.google.firebase.components.ComponentRegistrar" />
+145-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:54:17-82
+146            <meta-data
+146-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3e3d8e29f45b11a37752a9a3a688f408/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:28:13-30:85
+147                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+147-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3e3d8e29f45b11a37752a9a3a688f408/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:29:17-115
+148                android:value="com.google.firebase.components.ComponentRegistrar" />
+148-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3e3d8e29f45b11a37752a9a3a688f408/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:30:17-82
+149            <meta-data
+149-->[com.google.android.gms:play-services-measurement-api:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/31e797ab0ea2ddd5a9e6291c00e4790c/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:30:13-32:85
+150                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+150-->[com.google.android.gms:play-services-measurement-api:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/31e797ab0ea2ddd5a9e6291c00e4790c/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:31:17-139
+151                android:value="com.google.firebase.components.ComponentRegistrar" />
+151-->[com.google.android.gms:play-services-measurement-api:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/31e797ab0ea2ddd5a9e6291c00e4790c/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:32:17-82
+152            <meta-data
+152-->[com.google.firebase:firebase-installations:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f18ed37a2f4c43a6bb6a4d6fdbabaff5/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+153                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+153-->[com.google.firebase:firebase-installations:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f18ed37a2f4c43a6bb6a4d6fdbabaff5/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+154                android:value="com.google.firebase.components.ComponentRegistrar" />
+154-->[com.google.firebase:firebase-installations:17.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f18ed37a2f4c43a6bb6a4d6fdbabaff5/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+155        </service>
 156
-157        <meta-data
-157-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/9f4ef7b7bd5d1cf48e8c6a18f67a6140/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
-158            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
-158-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/9f4ef7b7bd5d1cf48e8c6a18f67a6140/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
-159            android:value="GlideModule" />
-159-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/9f4ef7b7bd5d1cf48e8c6a18f67a6140/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
-160
-161        <activity
-161-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:23:9-27:75
-162            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-162-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:24:13-93
-163            android:excludeFromRecents="true"
-163-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:25:13-46
-164            android:exported="false"
-164-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:26:13-37
-165            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-165-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:27:13-72
-166        <!--
-167            Service handling Google Sign-In user revocation. For apps that do not integrate with
-168            Google Sign-In, this service will never be started.
-169        -->
-170        <service
-170-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:33:9-37:51
-171            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-171-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:34:13-89
-172            android:exported="true"
-172-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:35:13-36
-173            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-173-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:36:13-107
-174            android:visibleToInstantApps="true" />
-174-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:37:13-48
-175
-176        <activity
-176-->[com.google.android.gms:play-services-base:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/319299bce391eb386c0a07be0bfec542/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
-177            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-177-->[com.google.android.gms:play-services-base:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/319299bce391eb386c0a07be0bfec542/jetified-play-services-base-17.5.0/AndroidManifest.xml:24:13-79
-178            android:exported="false"
-178-->[com.google.android.gms:play-services-base:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/319299bce391eb386c0a07be0bfec542/jetified-play-services-base-17.5.0/AndroidManifest.xml:25:13-37
-179            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-179-->[com.google.android.gms:play-services-base:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/319299bce391eb386c0a07be0bfec542/jetified-play-services-base-17.5.0/AndroidManifest.xml:26:13-72
-180
-181        <provider
-181-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
-182            android:name="com.google.firebase.provider.FirebaseInitProvider"
-182-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
-183            android:authorities="vn.weathervietnam.jicamobileapp.firebaseinitprovider"
-183-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
-184            android:directBootAware="true"
-184-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
-185            android:exported="false"
-185-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
-186            android:initOrder="100" />
-186-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
-187
-188        <meta-data
-188-->[com.google.android.gms:play-services-basement:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/48e33f054f6b82b9fa975e38830573fe/jetified-play-services-basement-17.5.0/AndroidManifest.xml:23:9-25:69
-189            android:name="com.google.android.gms.version"
-189-->[com.google.android.gms:play-services-basement:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/48e33f054f6b82b9fa975e38830573fe/jetified-play-services-basement-17.5.0/AndroidManifest.xml:24:13-58
-190            android:value="@integer/google_play_services_version" />
-190-->[com.google.android.gms:play-services-basement:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/48e33f054f6b82b9fa975e38830573fe/jetified-play-services-basement-17.5.0/AndroidManifest.xml:25:13-66
-191    </application>
-192
-193</manifest>
+157        <provider
+157-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:9-26:38
+158            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
+158-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-88
+159            android:authorities="vn.weathervietnam.jicamobileapp.reactnativefirebaseappinitprovider"
+159-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-86
+160            android:exported="false"
+160-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-37
+161            android:initOrder="99" />
+161-->[:react-native-firebase_app] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-35
+162        <provider
+162-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+163            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+163-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+164            android:authorities="vn.weathervietnam.jicamobileapp.fileprovider"
+164-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+165            android:exported="false"
+165-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+166            android:grantUriPermissions="true" >
+166-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+167            <meta-data
+167-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+168                android:name="android.support.FILE_PROVIDER_PATHS"
+168-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+169                android:resource="@xml/file_provider_paths" />
+169-->[:react-native-webview] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+170        </provider>
+171
+172        <receiver
+172-->[com.google.firebase:firebase-messaging-directboot:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/717c1de381c278e4b412b850db580234/jetified-firebase-messaging-directboot-22.0.0/AndroidManifest.xml:27:9-35:20
+173            android:name="com.google.firebase.messaging.directboot.FirebaseMessagingDirectBootReceiver"
+173-->[com.google.firebase:firebase-messaging-directboot:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/717c1de381c278e4b412b850db580234/jetified-firebase-messaging-directboot-22.0.0/AndroidManifest.xml:28:13-104
+174            android:directBootAware="true"
+174-->[com.google.firebase:firebase-messaging-directboot:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/717c1de381c278e4b412b850db580234/jetified-firebase-messaging-directboot-22.0.0/AndroidManifest.xml:29:13-43
+175            android:exported="true"
+175-->[com.google.firebase:firebase-messaging-directboot:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/717c1de381c278e4b412b850db580234/jetified-firebase-messaging-directboot-22.0.0/AndroidManifest.xml:30:13-36
+176            android:permission="com.google.android.c2dm.permission.SEND" >
+176-->[com.google.firebase:firebase-messaging-directboot:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/717c1de381c278e4b412b850db580234/jetified-firebase-messaging-directboot-22.0.0/AndroidManifest.xml:31:13-73
+177            <intent-filter>
+177-->[com.google.firebase:firebase-messaging-directboot:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/717c1de381c278e4b412b850db580234/jetified-firebase-messaging-directboot-22.0.0/AndroidManifest.xml:32:13-34:29
+178                <action android:name="com.google.firebase.messaging.RECEIVE_DIRECT_BOOT" />
+178-->[com.google.firebase:firebase-messaging-directboot:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/717c1de381c278e4b412b850db580234/jetified-firebase-messaging-directboot-22.0.0/AndroidManifest.xml:33:17-92
+178-->[com.google.firebase:firebase-messaging-directboot:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/717c1de381c278e4b412b850db580234/jetified-firebase-messaging-directboot-22.0.0/AndroidManifest.xml:33:25-89
+179            </intent-filter>
+180        </receiver>
+181        <receiver
+181-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:28:9-35:20
+182            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+182-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:29:13-78
+183            android:exported="true"
+183-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:30:13-36
+184            android:permission="com.google.android.c2dm.permission.SEND" >
+184-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:31:13-73
+185            <intent-filter>
+185-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-31:29
+186                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+186-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:17-81
+186-->[:react-native-firebase_messaging] /Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:25-78
+187            </intent-filter>
+188        </receiver>
+189        <!--
+190             FirebaseMessagingService performs security checks at runtime,
+191             but set to not exported to explicitly avoid allowing another app to call it.
+192        -->
+193        <service
+193-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:41:9-48:19
+194            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+194-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:42:13-82
+195            android:directBootAware="true"
+195-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:43:13-43
+196            android:exported="false" >
+196-->[com.google.firebase:firebase-messaging:22.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/f5f8f3c7265cb9936573bf3e93fb78a4/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:44:13-37
+197            <intent-filter android:priority="-500" >
+197-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:40:5-42:21
+198                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+198-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:41:7-68
+198-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:41:15-65
+199            </intent-filter>
+200        </service>
+201        <service
+201-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
+202            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+202-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:30:13-103
+203            android:exported="false" >
+203-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:31:13-37
+204            <meta-data
+204-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:32:13-34:39
+205                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+205-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:33:17-94
+206                android:value="cct" />
+206-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/3a2cc59925ac6b6428e2024e8618f6d4/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:34:17-36
+207        </service>
+208        <service
+208-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:26:9-30:19
+209            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+209-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:27:13-117
+210            android:exported="false"
+210-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:28:13-37
+211            android:permission="android.permission.BIND_JOB_SERVICE" >
+211-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:29:13-69
+212        </service>
+213
+214        <receiver
+214-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:32:9-34:40
+215            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+215-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:33:13-132
+216            android:exported="false" />
+216-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/c1e8c54468110be78700fd03b84e20f2/jetified-transport-runtime-3.0.0/AndroidManifest.xml:34:13-37
+217
+218        <meta-data
+218-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/9f4ef7b7bd5d1cf48e8c6a18f67a6140/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
+219            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+219-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/9f4ef7b7bd5d1cf48e8c6a18f67a6140/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
+220            android:value="GlideModule" />
+220-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/9f4ef7b7bd5d1cf48e8c6a18f67a6140/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
+221
+222        <activity
+222-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:23:9-27:75
+223            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+223-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:24:13-93
+224            android:excludeFromRecents="true"
+224-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:25:13-46
+225            android:exported="false"
+225-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:26:13-37
+226            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+226-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:27:13-72
+227        <!--
+228            Service handling Google Sign-In user revocation. For apps that do not integrate with
+229            Google Sign-In, this service will never be started.
+230        -->
+231        <service
+231-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:33:9-37:51
+232            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+232-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:34:13-89
+233            android:exported="true"
+233-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:35:13-36
+234            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+234-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:36:13-107
+235            android:visibleToInstantApps="true" />
+235-->[com.google.android.gms:play-services-auth:19.2.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/5044f5a425367bd1ad048c5a9dc727e2/jetified-play-services-auth-19.2.0/AndroidManifest.xml:37:13-48
+236
+237        <activity
+237-->[com.google.android.gms:play-services-base:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/319299bce391eb386c0a07be0bfec542/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
+238            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+238-->[com.google.android.gms:play-services-base:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/319299bce391eb386c0a07be0bfec542/jetified-play-services-base-17.5.0/AndroidManifest.xml:24:13-79
+239            android:exported="false"
+239-->[com.google.android.gms:play-services-base:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/319299bce391eb386c0a07be0bfec542/jetified-play-services-base-17.5.0/AndroidManifest.xml:25:13-37
+240            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+240-->[com.google.android.gms:play-services-base:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/319299bce391eb386c0a07be0bfec542/jetified-play-services-base-17.5.0/AndroidManifest.xml:26:13-72
+241
+242        <receiver
+242-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:29:9-33:20
+243            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+243-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:30:13-85
+244            android:enabled="true"
+244-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:31:13-35
+245            android:exported="false" >
+245-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:32:13-37
+246        </receiver>
+247
+248        <service
+248-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:35:9-38:40
+249            android:name="com.google.android.gms.measurement.AppMeasurementService"
+249-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:36:13-84
+250            android:enabled="true"
+250-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:37:13-35
+251            android:exported="false" />
+251-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:38:13-37
+252        <service
+252-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:39:9-43:72
+253            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+253-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:40:13-87
+254            android:enabled="true"
+254-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:41:13-35
+255            android:exported="false"
+255-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:42:13-37
+256            android:permission="android.permission.BIND_JOB_SERVICE" />
+256-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/6ddeea39129ad56d4224e2a21f948413/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:43:13-69
+257
+258        <provider
+258-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+259            android:name="com.google.firebase.provider.FirebaseInitProvider"
+259-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+260            android:authorities="vn.weathervietnam.jicamobileapp.firebaseinitprovider"
+260-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+261            android:directBootAware="true"
+261-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+262            android:exported="false"
+262-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+263            android:initOrder="100" />
+263-->[com.google.firebase:firebase-common:20.0.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/a756efe4c949ab8578636bff05a1c0e3/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+264
+265        <meta-data
+265-->[com.google.android.gms:play-services-basement:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/48e33f054f6b82b9fa975e38830573fe/jetified-play-services-basement-17.5.0/AndroidManifest.xml:23:9-25:69
+266            android:name="com.google.android.gms.version"
+266-->[com.google.android.gms:play-services-basement:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/48e33f054f6b82b9fa975e38830573fe/jetified-play-services-basement-17.5.0/AndroidManifest.xml:24:13-58
+267            android:value="@integer/google_play_services_version" />
+267-->[com.google.android.gms:play-services-basement:17.5.0] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/48e33f054f6b82b9fa975e38830573fe/jetified-play-services-basement-17.5.0/AndroidManifest.xml:25:13-66
+268
+269        <receiver android:name="com.transistorsoft.tsbackgroundfetch.FetchAlarmReceiver" />
+269-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:16:9-92
+269-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:16:19-89
+270
+271        <service
+271-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:18:9-21:72
+272            android:name="com.transistorsoft.tsbackgroundfetch.FetchJobService"
+272-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:19:13-80
+273            android:exported="true"
+273-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:20:13-36
+274            android:permission="android.permission.BIND_JOB_SERVICE" />
+274-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:21:13-69
+275
+276        <receiver
+276-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:23:9-30:20
+277            android:name="com.transistorsoft.tsbackgroundfetch.BootReceiver"
+277-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:24:13-77
+278            android:exported="false" >
+278-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:25:13-37
+279            <intent-filter>
+279-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:26:13-29:29
+280                <action android:name="android.intent.action.BOOT_COMPLETED" />
+280-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:29:7-69
+280-->/Users/ngovanmanh/Desktop/jicamobile/jicamobileapp/android/app/src/main/AndroidManifest.xml:29:15-66
+281                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+281-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:28:17-84
+281-->[com.transistorsoft:tsbackgroundfetch:0.5.4] /Users/ngovanmanh/.gradle/caches/transforms-2/files-2.1/129de4d1c0c65a77257d71ae72adb53b/jetified-tsbackgroundfetch-0.5.4/AndroidManifest.xml:28:25-81
+282            </intent-filter>
+283        </receiver>
+284    </application>
+285
+286</manifest>

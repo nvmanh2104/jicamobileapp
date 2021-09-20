@@ -36,7 +36,7 @@ class SettingsScreen extends React.PureComponent {
     );
   };
   onRefresh = () => {
-    // this.props.getWeatherNews(true);
+    
   };
 
   render() {

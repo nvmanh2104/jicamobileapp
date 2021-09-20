@@ -45,12 +45,10 @@ class AwsScreen extends React.PureComponent {
   // }
 
   onRefresh = () => {
-    // this.props.getWeatherNews(true);
+   
   };
 
-  goToNewsDetails = news => {
-    
-  };
+ 
   render() {
     const{isFetching,stations,data}= this.props
 

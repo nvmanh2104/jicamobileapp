@@ -6,6 +6,8 @@
 
 import kttvWorker from '../utils/kttvWorker';
 import { Constants, Languages } from '../utils/Omni';
+import { setStoredItem } from '../utils/asyncStorage';
+import { isFired } from '../utils/newChecker';
 
 const types = {
   GET_WEATHER_NEWS_PENDING: 'GET_WEATHER_NEWS_PENDING',
@@ -21,10 +23,10 @@ export const actions = {
     const now = Date.now();
     const { interval, timeout } = Constants;
 
-    if (
-      (force && (!isFetching || now - prevGettingTime > timeout)) ||
-      now - prevGettingTime > interval
-    ) {
+    // if (
+    //   (force && (!isFetching || now - prevGettingTime > timeout)) ||
+    //   now - prevGettingTime > interval
+    // ) {
       dispatch({ type: types.GET_WEATHER_NEWS_PENDING, now });
 
       kttvWorker
@@ -39,7 +41,13 @@ export const actions = {
             dispatch({
               type: types.GET_WEATHER_NEWS_SUCCESS,
               json: json.items,
+              
             });
+            json.items.map(obj =>{
+              isFired(obj)
+            })
+            setStoredItem(Constants.asyncStorageKey.news, json.items);
+
           }
         })
         .catch(() => {
@@ -48,7 +56,7 @@ export const actions = {
             error: Languages.GetDataError,
           });
         });
-    }
+    //}
   },
 };
 

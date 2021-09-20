@@ -10,6 +10,7 @@ import Article from '../../components/Article';
 import { colorSet } from '../../AppStyles';
 import styles from './styles';
 import { log } from '../../utils/log';
+import {showNotification, handleCancel} from '../../components/notification'
 
 class NewsScreen extends React.PureComponent {
   static navigationOptions = () => ({
@@ -30,6 +31,8 @@ class NewsScreen extends React.PureComponent {
     this._navListener = navigation.addListener('focus', () => {
       getWeatherNews();
     });
+    
+
   }
 
   onRefresh = () => {
