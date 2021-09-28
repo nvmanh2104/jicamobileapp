@@ -82,9 +82,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return {
     ...ownProps,
     ...stateProps,
-    // getWeatherNews: () => {
-    //   dispatch(newsActions.getWeatherNews());
-    // },
+   
   };
 };
 

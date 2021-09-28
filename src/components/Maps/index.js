@@ -152,7 +152,7 @@ class Maps extends React.PureComponent {
 }
 
 const mapStateToProps = ({locationReducer}) => ({
-  locationAdress:locationReducer.currentLocationReducer.currentLocation,
+  locationAdress:locationReducer.locationAdressReducer.savedLocations,
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {

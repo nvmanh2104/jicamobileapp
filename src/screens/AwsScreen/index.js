@@ -27,7 +27,9 @@ class AwsScreen extends React.PureComponent {
     var Interval =60
     this.props.getDataTable({StationIDs:null,Interval,DateTimeFrom,DateTimeTo})
   }
-
+  refreshData =()=>{
+    this.getFirstData()
+  }
 
   componentDidMount() {
   const { navigation, getStations} = this.props;    
@@ -38,17 +40,7 @@ class AwsScreen extends React.PureComponent {
     
 
   }
-  
 
-  // getFirstData= ()=>{
-  //   this.
-  // }
-
-  onRefresh = () => {
-   
-  };
-
- 
   render() {
     const{isFetching,stations,data}= this.props
 
@@ -57,7 +49,7 @@ class AwsScreen extends React.PureComponent {
     return (
       <React.Fragment>
         <StatusBar barStyle ="light-content"></StatusBar>
-        <Header/>
+        <Header isShow ={true} onRefresh = {this.refreshData} />
         <Maps stations = {jicaStations}
         data = {data}/>
         <ModalMapView></ModalMapView>
@@ -67,26 +59,30 @@ class AwsScreen extends React.PureComponent {
   }
 }
 
-const mapStateToProps = ({ netInfo, aws }) => ({
-  // netInfo,
+const mapStateToProps = ({ netInfo, aws }) => {
+  return {
+    netInfo,
   isFetching: aws.stationReducer.isFetching,
   stations: aws.stationReducer.stations,
   data:aws.tableDataReducer.data
-});
+  }
+};
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
   const { dispatch } = dispatchProps;
-
+  const {
+    netInfo: { isConnected }
+  } = stateProps;
   return {
     ...ownProps,
     ...stateProps,
-    getStations: (force = false) => {
+    getStations: (force = true) => {
       dispatch(awsAction.getStations(force));
     },
     getDataTable: (params) => {
       dispatch(awsAction.getDataTable(params));
     },
-    closeAWSModal: () => {
+    closeAWSModal: () => { 
       dispatch(awsAction.closeAWSModal());
     },
   };

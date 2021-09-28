@@ -38,8 +38,8 @@ const Constants = {
     City: 'Thành phố',
   },
   asyncStorageKey: {
-    // location: '@kttv-weather-location',
-    // address: '@kttv-weather-address',
+    location: '@kttv-weather-location',
+    address: '@kttv-weather-address',
     news: '@kttv-weather-news',
     // alert: '@kttv-weather-alert',
     // viewedAlert: '@kttv-weather-viewedAlert',

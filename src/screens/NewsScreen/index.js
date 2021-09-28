@@ -10,7 +10,7 @@ import Article from '../../components/Article';
 import { colorSet } from '../../AppStyles';
 import styles from './styles';
 import { log } from '../../utils/log';
-import {showNotification, handleCancel} from '../../components/notification'
+
 
 class NewsScreen extends React.PureComponent {
   static navigationOptions = () => ({
@@ -29,14 +29,20 @@ class NewsScreen extends React.PureComponent {
   componentDidMount() {
     const { navigation, getWeatherNews } = this.props;    
     this._navListener = navigation.addListener('focus', () => {
-      getWeatherNews();
+      var savedlocation = this.props.savedLocation.map(location=>location.addressText).toString();
+      // var currentLocation = this.props.locationAdress[0].addressText.toString()+','+savedlocation
+      
+      getWeatherNews({search:savedlocation});
     });
     
 
   }
 
   onRefresh = () => {
-    this.props.getWeatherNews(true);
+    var savedlocation = this.props.savedLocation.map(location=>location.addressText).toString();
+    // var currentLocation = this.props.locationAdress[0].addressText.toString()+','+savedlocation
+    
+    getWeatherNews({search:savedlocation});
   };
 
   goToNewsDetails = news => {
@@ -50,7 +56,7 @@ class NewsScreen extends React.PureComponent {
   };
 
   render() {
-    const { isFetching, news } = this.props;  
+    const { isFetching, news} = this.props;  
     return (
       <React.Fragment>
         <StatusBar barStyle="light-content" />
@@ -81,10 +87,13 @@ class NewsScreen extends React.PureComponent {
   }
 }
 
-const mapStateToProps = ({ netInfo, weatherNews }) => ({
+const mapStateToProps = ({ netInfo, weatherNews,locationReducer }) => ({
   // netInfo,
   isFetching: weatherNews.isFetching,
   news: weatherNews.news,
+  savedLocation: locationReducer.locationAdressReducer.savedLocations,
+
+
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
@@ -93,8 +102,8 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return {
     ...ownProps,
     ...stateProps,
-    getWeatherNews: (force = false) => {
-      dispatch(newsActions.getWeatherNews(force));
+    getWeatherNews: (params) => {
+      dispatch(newsActions.getWeatherNews(params));
     },
   };
 };

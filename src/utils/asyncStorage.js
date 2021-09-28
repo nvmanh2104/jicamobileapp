@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-community/async-storage';
 
 export const getStoredItem = (key, needParse = true) => {
+  
   return AsyncStorage.getItem(key)
     .then(value => {
       if (!value) return null;
@@ -12,4 +13,10 @@ export const getStoredItem = (key, needParse = true) => {
 export const setStoredItem = (key, value, needStringify = true) => {
   const newValue = needStringify ? JSON.stringify({ ...value}) : value;
   return AsyncStorage.setItem(key, newValue).catch(() => {});
+};
+
+
+export const convert2String = (key, value) => {
+  const stringValue =  value.map(obj=>obj.addressText).toString()
+  return  AsyncStorage.setItem(key, stringValue).catch(() => {});
 };

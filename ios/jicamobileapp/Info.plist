@@ -6,7 +6,7 @@
 	<string>en</string>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
-		<string>com.transistorsoft.fetch</string>
+		<string>com.jica.getnews</string>
 	</array>
 	<key>CFBundleDisplayName</key>
 	<string>jicamobileapp</string>

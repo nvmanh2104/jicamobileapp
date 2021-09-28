@@ -10,6 +10,7 @@ import Geolocation from 'react-native-geolocation-service';
 import { actions as netInfoActions } from './redux/NetInfoRedux';
 import {actions as locationActions} from './redux/LocationRedux';
 
+
 class Router extends React.PureComponent {
     constructor(props) {
         super(props);
@@ -18,10 +19,10 @@ class Router extends React.PureComponent {
           initialized: false,
         };
       }
-      async componentDidMount() {
+      async componentDidMount() {   
         if (Platform.OS === 'ios') {
-          
           this.getCurrentLocation();
+
         } 
         else {
           try {
@@ -41,22 +42,26 @@ class Router extends React.PureComponent {
               console.log('Location permission denied');
             }
           } catch (err) {
-            console.warn(err);
+            
           }
         }
+        
       }
-    
       getCurrentLocation() {
-        Geolocation.requestAuthorization('always');
+        if (Platform.OS === 'ios') {
+          
+          Geolocation.requestAuthorization('always');
+        } 
+       
         Geolocation.getCurrentPosition(
           position => {
-            console.log(position);
+            // console.log(position);
             this.props.getGeolocationAddress(position.coords)
           },
-          error => {
-            console.log('map error: ', error);
-            console.log(error.code, error.message);
-          },
+          // error => {
+          //   // console.log('map error: ', error);
+          //   // console.log(error.code, error.message);
+          // },
           {enableHighAccuracy: true, timeout: 15000, maximumAge: 10000},
         );
       }

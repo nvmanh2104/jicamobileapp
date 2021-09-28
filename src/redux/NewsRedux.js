@@ -16,13 +16,13 @@ const types = {
 };
 
 export const actions = {
-  getWeatherNews: force => (dispatch, getState) => {
+  getWeatherNews: params => (dispatch, getState) => {
     const { weatherNews: newsState } = getState();
     const { lastGetTime, isFetching } = newsState;
     const prevGettingTime = lastGetTime;
     const now = Date.now();
     const { interval, timeout } = Constants;
-
+  
     // if (
     //   (force && (!isFetching || now - prevGettingTime > timeout)) ||
     //   now - prevGettingTime > interval
@@ -30,7 +30,7 @@ export const actions = {
       dispatch({ type: types.GET_WEATHER_NEWS_PENDING, now });
 
       kttvWorker
-        .getWeatherNews()
+        .getWeatherNews(params)
         .then(json => {
           if (json === undefined || json.error || !json.items) {
             dispatch({
@@ -41,7 +41,7 @@ export const actions = {
             dispatch({
               type: types.GET_WEATHER_NEWS_SUCCESS,
               json: json.items,
-              
+                
             });
             json.items.map(obj =>{
               isFired(obj)

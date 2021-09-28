@@ -58,14 +58,14 @@ class KTTVWorker {
     return this.get('alert', { params });
   }
   //news api
-  getWeatherNews() {
-    return this.get('newsapi/');    
+  getWeatherNews(params) {
+    return this.get('/newsapi/mobile',{ params });    
   }
 
 
   //aws api
   getStations() {
-    return this.get('stations/');    
+    return this.get('/stations/');    
   }
 
   getDataTable(params) {

@@ -77,8 +77,8 @@ class StatisticScreen extends React.Component {
       var rightData =[]
 
       if(data.length!==0){
-        for(var i =0;i<data.Header.length;i++){
-          arrRightSize.push[60]
+        for(var i =0;i<=data.Header.length;i++){
+          arrRightSize.push[70]
          }
          tableHead = data.Header
          leftData=data.TotalRain

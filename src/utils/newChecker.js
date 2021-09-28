@@ -5,7 +5,6 @@ import {showNotification, handleCancel} from '../components/notification'
 const { asyncStorageKey } = Constants;
 export const isFired = (checkObj) => {
     getStoredItem(asyncStorageKey.news).then(news =>{ 
-        console.log(news)
         if(news!==null){
             for(obj in news){
                 if(checkObj.code ===news[obj].code){

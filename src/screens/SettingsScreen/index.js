@@ -19,21 +19,26 @@ class SettingsScreen extends React.PureComponent {
   }
 
   componentDidMount() {}
-
+  onRemoveLocation = location => {
+    this.props.removeLocation(location);
+  };
   renderItem = ({item, index}) => {
-    return (
-      <View style={styles.locationItem}>
-        <Text style={styles.mainText}>
-          {item.district}-{item.state}
-        </Text>
-        <_IconIO
-          name="trash-outline"
-          size={25}
-          style={styles.dateIcon}
-          onPress={() => this.onRemoveLocation(item)}
-        />
-      </View>
-    );
+    if(index !==0){
+      return (
+        <View style={styles.locationItem}>
+          <Text style={styles.mainText}>
+            {item.district}-{item.state}
+          </Text>
+          <_IconIO
+            name="trash-outline"
+            size={25}
+            style={styles.dateIcon}
+            onPress={() => this.onRemoveLocation(item)}
+          />
+        </View>
+      );
+    }
+
   };
   onRefresh = () => {
     

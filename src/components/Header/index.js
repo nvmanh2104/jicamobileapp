@@ -22,13 +22,12 @@ class Header extends React.PureComponent {
     
   }
   openSetting =()=>{
-    this.props.openSettingModal()
+   this.props.onRefresh()
   }
 
   
   render() {
     const { backButton,locationAdress} = this.props;
-    console.log(locationAdress)
     return (
       <React.Fragment>
         <StatusBar barStyle ="light-content"></StatusBar>
@@ -41,7 +40,9 @@ class Header extends React.PureComponent {
        
             <View style = {styles.backButonContainer}>
                 <View style={styles.buttonItem}>
-                {/* <_IconIO name = "settings-outline" size ={30} style ={styles.dateIcon}onPress={this.openSetting} />  */}
+                  {this.props.isShow ? <_IconIO name = "refresh-outline" size ={30} style ={styles.dateIcon}onPress={this.openSetting} /> :
+  <React.Fragment></React.Fragment>}
+                
                 </View>
             </View>
             
@@ -53,7 +54,7 @@ class Header extends React.PureComponent {
 }
 
 const mapStateToProps = ({ locationReducer}) => ({
-  locationAdress:locationReducer.currentLocationReducer.currentLocation,
+  locationAdress:locationReducer.locationAdressReducer.savedLocations,
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
@@ -75,7 +76,7 @@ export default connect(
 )(Header);
 
 const HEADER_ICON_SIZE =40;
-const height = Device.Window.height*0.06
+const height = Device.Window.height*0.04
 const styles = StyleSheet.create({
     headerContainer:{
         flexDirection:'row',
