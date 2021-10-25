@@ -1,22 +1,14 @@
 import React from 'react';
 import {
-  FlatList,
   Text,
-  RefreshControl,
   View,
-  StatusBar,
   Dimensions,
 } from 'react-native';
 import {connect} from 'react-redux';
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import CustomIcon from '../../components/BottomBarIcon';
 import {actions as awsAction} from '../../redux/AwsRedux';
-import ModalMapView from '../ModalMapView';
-// import Spinner from '../../components/Spinner';
-// import { moment } from '../../utils/Omni';
-import {colorSet} from '../../AppStyles';
 import styles from './styles';
-import {log} from '../../utils/log';
 import moment from 'moment';
 const {height, width} = Dimensions.get('window');
 const LATITUDE = 21.030653; // Korea Town, New York, NY 10001
@@ -62,19 +54,19 @@ class Maps extends React.PureComponent {
   };
 
   clickMarker = StationID => {
-    var current = moment('2021-04-27T00:00:00').format('YYYY-MM-DDTHH:mm:ss');
+    var current = moment().format('YYYY-MM-DDTHH:mm:ss');
 
     this.props.openAWSModal();
     this.props.getRain10mDatas({
       StationIDs: StationID,
-      DateTimeFrom: moment('2021-04-27T00:00:00')
+      DateTimeFrom: moment()
         .add(-6, 'h')
         .format('YYYY-MM-DDTHH:mm:ss'),
       DateTimeTo:current
     });
     this.props.getRain1hDatas({
       StationIDs: StationID,
-      DateTimeFrom: moment('2021-04-27T00:00:00')
+      DateTimeFrom: moment()
         .add(-24, 'h')
         .format('YYYY-MM-DDTHH:mm:ss'),
       DateTimeTo:current

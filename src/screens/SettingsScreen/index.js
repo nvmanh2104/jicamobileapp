@@ -7,7 +7,7 @@ import styles from './styles';
 import _IconIO from 'react-native-vector-icons/Ionicons';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Header from '../../components/Header';
-import moment from 'moment';
+import settingLanguage from '../../utils/settingLanguage';
 import Switch from 'react-native-switch-pro'
 class SettingsScreen extends React.PureComponent {
   static navigationOptions = () => ({
@@ -72,7 +72,7 @@ class SettingsScreen extends React.PureComponent {
 
           <View style={styles.savedLocationContainer}>
             <View style={styles.savedTextContainer}>
-              <Text style={styles.savedText}>Danh Sach Dia Diem Da Luu</Text>
+              <Text style={styles.savedText}> {this.props.language?settingLanguage.DIADIEM.VIE:settingLanguage.DIADIEM.EN}</Text>
             </View>
             <SafeAreaView style={{flex: 1}}>
             <FlatList

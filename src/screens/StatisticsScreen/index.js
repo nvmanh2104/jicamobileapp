@@ -23,16 +23,16 @@ class StatisticScreen extends React.Component {
       isVisible: false,
       values: {
         StationIDs: null,
-        DateTimeFrom: moment().add(-6, 'h').format('YYYY-MM-DDTHH:mm'),
-        DateTimeTo: moment().format('YYYY-MM-DDTHH:mm'),
+        DateTimeFrom: moment().format('YYYY-MM-DD')+"T00:05",
+        DateTimeTo:  moment().add(1, 'd').format('YYYY-MM-DD')+"T00:00",
         Interval: 10,
       },
       // isLoading:true
     };
   }
   getFirstData = ()=>{
-    var DateTimeTo = moment("2021-04-26T00:00:00").format("YYYY-MM-DD") + 'T00:00:00'
-    var DateTimeFrom = moment("2021-04-26T00:00:00").add(-1,'d').format("YYYY-MM-DD") + 'T00:00:00'
+    var DateTimeFrom = moment().format('YYYY-MM-DD')+"T00:05:00"
+    var DateTimeTo =  moment().add(1, 'd').format('YYYY-MM-DD')+"T00:00:00"
     var Interval =60
     this.props.getMobileTable({StationIDs:null,Interval,DateTimeFrom,DateTimeTo})
   }
@@ -65,27 +65,26 @@ class StatisticScreen extends React.Component {
     var Interval = values.Interval;
     var DateTimeFrom = values.DateTimeFrom + ':00';
     var DateTimeTo = values.DateTimeTo + ':00';
-    this.props.getDataTable({StationIDs, Interval, DateTimeFrom, DateTimeTo});
+    this.props.getMobileTable({StationIDs, Interval, DateTimeFrom, DateTimeTo});
   };
 
   render() {
     
-    const { data} = this.props;
+    const { data,isFetching} = this.props;
       var arrRightSize =[]
       var tableHead =[]
       var leftData=[]
       var rightData =[]
-
       if(data.length!==0){
         for(var i =0;i<=data.Header.length;i++){
-          arrRightSize.push[70]
+          arrRightSize.push(50)
          }
          tableHead = data.Header
          leftData=data.TotalRain
          rightData = data.RainData
 
       }
-     
+      console.log(isFetching)
     return (
       <React.Fragment>
        
@@ -129,6 +128,7 @@ class StatisticScreen extends React.Component {
           arrRightSize={arrRightSize}
           leftData={leftData}
           rightData={rightData}
+          isFetching={isFetching}
           ></Tables>
         </View> 
       </React.Fragment>
@@ -141,6 +141,7 @@ const mapStateToProps = ({netInfo, statistic,locationReducer}) => ({
   language: locationReducer.languageReducer.isEn,
   // stations: aws.stationReducer.stations,
   data: statistic.tableDataReducer.data,
+  isFetching: statistic.tableDataReducer.isFetching,
 
 });
 

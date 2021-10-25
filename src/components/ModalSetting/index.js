@@ -13,6 +13,7 @@ import {actions as locationActions} from '../../redux/LocationRedux';
 import SearchLocation from '../SearchLocation';
 import styles from './styles';
 import _IconIO from 'react-native-vector-icons/Ionicons';
+import settingLanguage from '../../utils/settingLanguage';
 // import LocationSearchBar from '../LocationSearchBar'
 
 class ModalSetting extends React.PureComponent {
@@ -77,7 +78,7 @@ class ModalSetting extends React.PureComponent {
               <View style={styles.savedLocationContainer}>
                 <View style={styles.savedTextContainer}>
                   <Text style={styles.savedText}>
-                    Danh Sach Dia Diem Da Luu
+                   {this.props.language?settingLanguage.DIADIEM.VIE:settingLanguage.DIADIEM.EN}
                   </Text>
                 </View>
 

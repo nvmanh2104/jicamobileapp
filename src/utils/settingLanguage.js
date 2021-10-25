@@ -113,5 +113,14 @@ export default {
     CAIDAT:{
       EN:'Settings',
       VIE:'Cài đặt'
+    },
+    DIADIEM:{
+      EN:'Saved Locations',
+      VIE:'Danh sách địa điểm đã lưu'
+    },
+
+    LUU:{
+      EN:'Save',
+      VIE:'Lưu'
     }
 };

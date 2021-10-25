@@ -9,6 +9,7 @@ import kttvWorker from '../../utils/kttvWorker';
 import { parseLocationAddress } from '../../utils/address';
 import { colorSet, styleSet ,fontSizeSet} from '../../AppStyles';
 import styles from './styles';
+import settingLanguage from '../../utils/settingLanguage'
 class SearchLocation extends React.PureComponent {
   static navigationOptions = () => ({
     header: null,
@@ -94,7 +95,7 @@ class SearchLocation extends React.PureComponent {
           <Text style={styles.mainText}>{item.district || item.state}</Text>
           <Text style={styles.subText}>{item.state}</Text>
         </View>
-        <Text style={styles.actionText}>{'Lưu'}</Text>
+        <Text style={styles.actionText}>{this.props.language?settingLanguage.LUU.VIE:settingLanguage.LUU.EN}</Text>
       </TouchableOpacity>
     );
   };
@@ -123,6 +124,7 @@ class SearchLocation extends React.PureComponent {
 }
 
 const mapStateToProps = ({ netInfo, locationReducer }) => ({
+  language: locationReducer.languageReducer.isEn,
   // netInfo,
   // locations: locationReducer.locationAdressReducer.currentLocation,
 });

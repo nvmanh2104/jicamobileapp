@@ -12,7 +12,7 @@ import {
 import moment from 'moment';
 import {connect} from 'react-redux';
 import _IconIO from 'react-native-vector-icons/Ionicons';
-import DateTimePicker from 'react-native-modal-datetime-picker';
+import DateTimePickerModal from "react-native-modal-datetime-picker";
 var {width, height} = Dimensions.get('window');
 
 class DateTime extends React.PureComponent {
@@ -20,13 +20,21 @@ class DateTime extends React.PureComponent {
     super(props);
     this.state = {
         show: false,
-        mode: 'datetime',
+        // mode: 'datetime',
         displayFormat: 'YYYY-MM-DDTHH:mm:ss',
         label: 'Date',
       };
+      // this.isMountedVal = 0;
+      
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    // this.isMountedVal = 1;
+  }
+  componentWillUnmount(){
+		// this.isMountedVal = 0;
+	}
+	
   showDateTimePicker = () => {
     // alert('showDateTimePicker');
     this.setState({show: true});
@@ -34,17 +42,19 @@ class DateTime extends React.PureComponent {
   };
 
   hideDateTimePicker = () => {
-    this.setState({show: false});
+    // if(this.isMountedVal){
+      this.setState({show:false});
+    // }
+    
   };
 
   handleDatePicked = value => {
+    this.hideDateTimePicker();
     this.props.setFieldValue(this.props.name, moment(value).format('YYYY-MM-DDTHH:mm'))
-    setTimeout(() => {
-      this.hideDateTimePicker();
-    }, 250);
+   
   };
   render() {
-    const {show, mode, displayFormat} = this.state;
+    const {show} = this.state;
     const {  value,label } = this.props;
     return (
       <React.Fragment>
@@ -54,10 +64,10 @@ class DateTime extends React.PureComponent {
           <Text style={styles.dtInput}>{value}</Text>
           </View>
        
-        <DateTimePicker
+        <DateTimePickerModal
           date={value? new Date(value) : new Date()}
           isVisible={show}
-          mode={mode}
+          mode='datetime'
           onConfirm={this.handleDatePicked}
           onCancel={this.hideDateTimePicker}
         />

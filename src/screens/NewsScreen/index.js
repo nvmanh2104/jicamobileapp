@@ -42,7 +42,7 @@ class NewsScreen extends React.PureComponent {
     var savedlocation = this.props.savedLocation.map(location=>location.addressText).toString();
     // var currentLocation = this.props.locationAdress[0].addressText.toString()+','+savedlocation
     
-    getWeatherNews({search:savedlocation});
+    this.props.getWeatherNews({search:savedlocation});
   };
 
   goToNewsDetails = news => {

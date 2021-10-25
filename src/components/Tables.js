@@ -8,7 +8,7 @@ import moment from 'moment';
 const borderColor = '#C1C0B9';
 const primaryColor = 'dodgerblue';
 const backgroundColor = '#F7F6E7';
-
+import Spinner from 'react-native-loading-spinner-overlay';
 const headerHeight = 40;
 const leftColumnWidth = 180;
 
@@ -23,139 +23,14 @@ class Tables extends React.PureComponent {
       leftHeadEN: ['Station', 'Name', 'Total'],
       leftHeadVIE: ['Mã', 'Tên', 'Tổng'],
       lefArr: [60, 100,70],  
+      spinner: false
     };
   }
-  //   const leftRef = useRef<ScrollView>(null);
-  //   const rightRef = useRef<ScrollView>(null);
-  // calculateRightHeader = (begin, end, interval) => {
-  //   var tableHead = [];
-  //   var arrRightSize =[]
-  //   var hours = Math.floor(
-  //     (Math.ceil(
-  //       (moment(begin).minutes() + moment(begin).hours() * 60) / interval,
-  //     ) *
-  //       interval) /
-  //       60,
-  //   );
-  //   var minutes =
-  //     (Math.ceil(
-  //       (moment(begin).minutes() + moment(begin).hours() * 60) / interval,
-  //     ) *
-  //       interval) %
-  //     60;
-  //   var newbegin = '';
-  //   if (hours === 24) {
-  //     newbegin = moment(begin).add(1, 'd');
-  //     newbegin.hours(0);
-  //   } else {
-  //     newbegin = moment(begin).hours(hours);
-  //   }
-  //   newbegin.minutes(minutes);
-  //   newbegin.seconds(0);
-  //   var i = 0;
-  //   var arrend = moment(end);
-  //   tableHead.push(newbegin.format('MM-DD[\n]HH:mm'))
-  //   arrRightSize.push[60]
-  //   while (true) {
-  //     var next = newbegin.add(interval, 'm');
-
-  //     if (next > arrend) {
-  //       break;
-  //     }
-  //     if (i === 100) {
-  //       break;
-  //     }
-  //     i = i + 1;
-  //     tableHead.push(next.format('MM-DD[\n]HH:mm'));
-  //     arrRightSize.push[60]
-  //   }
-  //   return {tableHead,arrRightSize};
-  // };
-
-  // calculateRightData = (StationIDs, jicaStations, tableHead, data) => {
-  //   var leftData = [];
-  //   var rightData = [];
-
-  //   var myStations =StationIDs===null ?jicaStations:jicaStations.filter(x=> StationIDs.includes(x.StationID))
-  //   myStations.map(station => {
-  //       const rowData = [];
-  //       var obj = data.filter(x => x.StationID === station.StationID);
-  //       //neu trong data co
-  //       if (obj.length !== 0) {
-  //         leftData.push([
-  //           station.StationID,
-  //           station.StationName.EN,
-  //           obj[0].TotalRain,
-  //         ]);
-          
-
-  //         tableHead.map(head => {
-  //           var arrObj = Object.entries(obj[0].Data)
-  //           // Object.keys(obj[0].Data).filter( key=> moment(key).format('MM-DD[\n]HH:mm') === head) 
-  //           var rs= arrObj.filter(([key, value]) => moment(key).format('MM-DD[\n]HH:mm') === head);
-  //           rs.length===0 ? rowData.push(''):rowData.push(rs[0][1].toFixed(1))
-  //           });
-  //       } else {
-  //         leftData.push([station.StationID, station.StationName.EN, '']);
-  //         tableHead.map(head => {
-  //           rowData.push('');
-  //         });
-  //       }
-  //       rightData.push(rowData);
-     
-  //     });
-    
-  //   return {leftData, rightData};
-
-  //   // else{
-  //   //   StationIDs.map(station =>{
-  //   //     var obj = jicaStations.filter(x=>x.StationID===station)
-  //   //     leftData.push([obj.StationID,obj.StationName.EN,obj.TotalRain]);
-  //   //     const rowData = [];
-  //   //     Object.keys(obj.data).map(function(key, index) {
-  //   //       tableHead.map(head =>{
-  //   //         if(moment(key).format('MM-DD[\n]HH:mm')===head){
-  //   //           rowData.push(data[key].toFixed(1))
-  //   //         }
-  //   //       })
-  //   //     });
-  //   //     rightData.push(rowData)
-  //   //   })
-  //   // }
-  // };
+ 
 
   render() {
-     const {tableHead,arrRightSize,leftData,rightData} = this.props;
-    // const {isFetching, stations, data, header} = this.props;
-    // var {tableHead ,arrRightSize}= this.calculateRightHeader(
-    //   header.DateTimeFrom,
-    //   header.DateTimeTo,
-    //   header.Interval,
-    // );
- 
-    // let jicaStations =
-    //   stations.length !== 0 ? stations.filter(x => x.Project === 'JICA') : [];
-    // var {leftData, rightData} = this.calculateRightData(
-    //   header.StationIDs,
-    //   jicaStations,
-    //   tableHead,
-    //   data,
-    // );
-  
-    // const recordData = [];
-    // for (let i = 0; i < jicaStations.length; i += 1) {
-
-    //   recordData.push([jicaStations[i].StationID,jicaStations[i].StationName.EN]);
-    // }
-
-    // const tableData = [];
-    // for (let i = 0; i < jicaStations.length; i += 1) {
-    //   const rowData = [];
-    //   for (let j = 0; j < 9; j += 1) {
-    //     rowData.push(`${i}${j}`);
-    //   }
-    //   tableData.push(rowData);
-    // }
+     const {tableHead,arrRightSize,leftData,rightData,isFetching} = this.props;
+     
     
     return (
       <View
@@ -164,6 +39,11 @@ class Tables extends React.PureComponent {
           flexDirection: 'row',
           backgroundColor: '#eee',
         }}>
+        {/* <Spinner
+          visible={true}
+          textContent={'LoadingData...'}
+          textStyle={styles.spinnerTextStyle}
+        /> */}
         {/* Left Column */}
         <View
           style={{
@@ -260,6 +140,9 @@ const styles = StyleSheet.create({
   row: {height: 28},
   text: {textAlign: 'center'},
   dataWrapper: {marginTop: -1},
+  spinnerTextStyle: {
+    color: '#FFF'
+  },
 });
 
 const mapStateToProps = ({netInfo, aws,locationReducer}) => ({

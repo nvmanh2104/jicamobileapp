@@ -59,22 +59,14 @@ class App extends React.Component {
   render() {
     const persistor = persistStore(store);
     return (
-      
+ 
       <Provider store={store}>
-         <NetworkChecker
-      position="bottom"
-      duration={2000} // In milliseconds
-      notConnectedMessage="Not connected to Internet!"
-      notConnectedTextColor="white"
-      notConnectedBackgroundColor="grey"
-      connectedMessage="Connected to Internet!"
-      connectedTextColor="white"
-      connectedBackgroundColor="green"
-    ></NetworkChecker>
+    
         <PersistGate persistor={persistor}>
           <Router />
         </PersistGate>
       </Provider>
+      
     );
   }
 }

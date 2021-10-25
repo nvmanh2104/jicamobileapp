@@ -26,7 +26,7 @@ class ModalMapView extends React.PureComponent {
   getFullList10mDatasDetail = (list10mData)=>{
     var  newArray =[];
     for (var i = 36;i>=0;i --){
-      var newDateObj = moment('2021-04-27T00:00:00').add(-i*10, 'm').toDate();
+      var newDateObj = moment().add(-i*10, 'm').toDate();
       var minutes = Math.floor(new Date(newDateObj).getMinutes()/10)*10;
       var stringDate = `${newDateObj.getFullYear()}-${pad(newDateObj.getMonth()+1,2)}-${pad(newDateObj.getDate(),2)}T${pad(newDateObj.getHours(),2)}:${pad(minutes,2)}:00`
       var a = list10mData.filter(function (item){
@@ -52,7 +52,7 @@ class ModalMapView extends React.PureComponent {
   getFullList1hDatasDetail = (list1hData)=>{
     var  newArray =[];
     for (var i = 24;i>=0;i --){
-      var newDateObj = moment('2021-04-27T00:00:00').add(-i*60,'m').toDate();
+      var newDateObj = moment().add(-i*60,'m').toDate();
     var hours = Math.floor(new Date(newDateObj).getHours())
       var stringDate = `${newDateObj.getFullYear()}-${pad(newDateObj.getMonth()+1,2)}-${pad(newDateObj.getDate(),2)}T${pad(hours,2)}:00`
       var a = list1hData.filter(function (item){

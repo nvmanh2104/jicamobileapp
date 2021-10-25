@@ -9,7 +9,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Geolocation from 'react-native-geolocation-service';
 import { actions as netInfoActions } from './redux/NetInfoRedux';
 import {actions as locationActions} from './redux/LocationRedux';
-
+import NetworkChecker from 'react-native-network-checker';
 
 class Router extends React.PureComponent {
     constructor(props) {
@@ -67,23 +67,31 @@ class Router extends React.PureComponent {
       }
     static getDerivedStateFromProps(nextProps, prevState) {
       const newState = {};
-      if (!prevState.initialized){
-        nextProps.renewConnectionStatus();
-        nextProps.subscribeToConnectionStatus();
+      // if (!prevState.initialized){
+      //   nextProps.renewConnectionStatus();
+      //   nextProps.subscribeToConnectionStatus();
 
-        newState.initialized = true;
-      }            
+      //   newState.initialized = true;
+      // }            
       return Object.keys(newState).length ? newState : null;
     }
 
       render() {               
         return (
-          // <View style={[styleSet.app, { backgroundColor: colorSet.white }]}>           
-          //   <AppNavigation ref={comp => (this.navigator = comp)} />
-          // </View>
+          <NetworkChecker
+          position="top"
+          duration={2000} // In milliseconds
+          notConnectedMessage="Not connected to Internet!"
+          notConnectedTextColor="white"
+          notConnectedBackgroundColor="grey"
+          connectedMessage="Connected to Internet!"
+          connectedTextColor="white"
+          connectedBackgroundColor="green"
+        >
           <NavigationContainer>
             <AppNavigation/>
           </NavigationContainer>
+          </NetworkChecker>
         );
       }
 }
@@ -98,8 +106,8 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return {
     ...ownProps,
     ...stateProps,
-    renewConnectionStatus: () => netInfoActions.renewConnectionStatus(dispatch),
-    subscribeToConnectionStatus: () => dispatch(netInfoActions.subscribeToConnectionStatus()),
+    // renewConnectionStatus: () => netInfoActions.renewConnectionStatus(dispatch),
+    // subscribeToConnectionStatus: () => dispatch(netInfoActions.subscribeToConnectionStatus()),
     getGeolocationAddress: (params) => {
       dispatch(locationActions.getGeolocationAddress(params));
 }
