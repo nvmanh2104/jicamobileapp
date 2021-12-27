@@ -25,7 +25,7 @@ class ModalMapView extends React.PureComponent {
   };
   getFullList10mDatasDetail = (list10mData)=>{
     var  newArray =[];
-    for (var i = 36;i>=0;i --){
+    for (var i = 24;i>=0;i --){
       var newDateObj = moment().add(-i*10, 'm').toDate();
       var minutes = Math.floor(new Date(newDateObj).getMinutes()/10)*10;
       var stringDate = `${newDateObj.getFullYear()}-${pad(newDateObj.getMonth()+1,2)}-${pad(newDateObj.getDate(),2)}T${pad(newDateObj.getHours(),2)}:${pad(minutes,2)}:00`
@@ -42,7 +42,7 @@ class ModalMapView extends React.PureComponent {
         newArray.push(obj)
       }
       else{
-        newArray.push({x:newDateObj.getTime(),y:a[0].Value.toFixed(2)})
+        newArray.push({x:new Date(stringDate).getTime(),y:a[0].Value.toFixed(2)})
       }
     }
   
@@ -50,6 +50,7 @@ class ModalMapView extends React.PureComponent {
   }
 
   getFullList1hDatasDetail = (list1hData)=>{
+    
     var  newArray =[];
     for (var i = 24;i>=0;i --){
       var newDateObj = moment().add(-i*60,'m').toDate();
@@ -67,7 +68,7 @@ class ModalMapView extends React.PureComponent {
         newArray.push(obj)
       }
       else{
-        newArray.push({x:newDateObj.getTime(),y:a[0].Value.toFixed(2)})
+        newArray.push({x:new Date(stringDate).getTime(),y:a[0].Value.toFixed(2)})
       }
     }
   
@@ -86,18 +87,18 @@ class ModalMapView extends React.PureComponent {
   //   return false;
   // }
   render() {
-    var {rain10mdata,stations,rain1hdata} = this.props
-    var new10mArray =[]
-    var new1hArray =[]
-     if(rain10mdata.length !==0){
-      new10mArray =this.getFullList10mDatasDetail(rain10mdata)
-     }
-     if(rain10mdata.length !==0){
-      new1hArray =this.getFullList1hDatasDetail(rain1hdata)
-     }
-     var label10m = stations.length !==0 && rain10mdata.length !==0 ? `${this.props.language? settingLanguage.MA.VIE:settingLanguage.MA.EN}: ${rain10mdata[0].StationID} ${this.props.language? settingLanguage.TRAM.VIE:settingLanguage.TRAM.EN}: ${stations.find(x=>x.StationID ===rain10mdata[0].StationID).StationName.VN}`:''
-
-
+    var {rain10mdata,stations,rain1hdata,isVisible} = this.props
+    if (isVisible ===true){
+      var new10mArray =[]
+      var new1hArray =[]
+       if(rain10mdata.length !==0){
+        new10mArray =this.getFullList10mDatasDetail(rain10mdata)
+       }
+       if(rain10mdata.length !==0){
+        new1hArray =this.getFullList1hDatasDetail(rain1hdata)
+       }
+       var label10m = stations.length !==0 && rain10mdata.length !==0 ? `${this.props.language? settingLanguage.MA.VIE:settingLanguage.MA.EN}: ${rain10mdata[0].StationID} ${this.props.language? settingLanguage.TRAM.VIE:settingLanguage.TRAM.EN}: ${stations.find(x=>x.StationID ===rain10mdata[0].StationID).StationName.VN}`:''
+    }
     return (
       <React.Fragment>
         <Modal
@@ -105,6 +106,8 @@ class ModalMapView extends React.PureComponent {
           isVisible={this.props.isVisible}
           onBackdropPress={this.props.closeAWSModal}
           style={{justifyContent: 'flex-end', margin: 0}}>
+            {isVisible===true?
+            
           <View
             style={{
               backgroundColor: 'white',
@@ -170,6 +173,7 @@ class ModalMapView extends React.PureComponent {
 
          
           </View>
+          :<View></View>}
         </Modal>
       </React.Fragment>
     );

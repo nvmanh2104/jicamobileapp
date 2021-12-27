@@ -21,6 +21,7 @@ class KTTVWorker {
   
 
   getLocationAddress(location) {
+    
     const params = {
       'point.lat': `${location.latitude}`,
       'point.lon': `${location.longitude}`,
@@ -30,6 +31,7 @@ class KTTVWorker {
       // zoom: 13,
       // 'accept-language': 'vi',
     };
+    
     return this.get('https://maps.vnpost.vn/api/reverse', { params }, 3 * Constants.timeout); // vmap has longer timeout
   }
 
@@ -59,6 +61,7 @@ class KTTVWorker {
   }
   //news api
   getWeatherNews(params) {
+    
     return this.get('/newsapi/mobile',{ params });    
   }
 
@@ -162,12 +165,12 @@ class KTTVWorker {
       //   params.body = JSON.stringify(data);
     }
 
-    log(`Fetch started ${params.url}`);
+    // log(`Fetch started ${params.url}`);
     const timeoutParam = timeout || Constants.timeout;
     return (
       fetchWithTimeout(params.url, params, timeoutParam)
         .then(res => {
-          log(`Fetch finished ${params.url}`);                    
+          // log(`Fetch finished ${params.url}`);                    
           if (res.status >= 200 && res.status <= 299) {
             return res.json();
             // } else if (res.status === 401) {
@@ -193,8 +196,8 @@ class KTTVWorker {
         //   return res;
         // })
         .catch(error => {
-          log(`Fetch error ${params.url}`);
-          log(error);
+          // log(`Fetch error ${params.url}`);
+          // log(error);
           return undefined;
         })
     );

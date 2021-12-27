@@ -7,7 +7,7 @@
 const Constants = {
   appStoreId: '1485682279',
   bundleId: 'vn.weathervietnam.jicamobileapp',
-  devDomain: 'http://api.jica.weathervietnam.vn/api',
+  devDomain: 'https://api.jica.weathervietnam.vn/api',
   deeplinkBase: 'kttvweather',
   VND: '₫',
   oC: '&#8451;',

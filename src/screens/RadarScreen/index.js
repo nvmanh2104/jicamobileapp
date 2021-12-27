@@ -1,11 +1,12 @@
 import React from 'react';
 import {  View, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
-
 import { colorSet } from '../../AppStyles';
 import styles from './styles';
 import { WebView } from 'react-native-webview';
-
+import { RefreshControl, Dimensions, StyleSheet } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import Header from '../../components/Header';
 class RadarScreen extends React.PureComponent {
   static navigationOptions = () => ({
     header: null,
@@ -23,18 +24,19 @@ class RadarScreen extends React.PureComponent {
 
   }
 
-  onRefresh = () => {
-    
-  };
+ 
 
   
-
+  
   render() {
+    let WebviewRef
    return(
      <React.Fragment>
         <StatusBar barStyle="light-content"></StatusBar>
-        <View style={styles.header}></View>
-      <WebView style={styles.webview} source={{ uri: 'http://jica.weathervietnam.vn/mobileradar' }} />
+        <Header isShow ={true} onRefresh = {()=>{WebviewRef&&WebviewRef.reload()}} />
+        {/* <View style={styles.header}></View> */}
+      <WebView ref ={WEBVIEW_REF=>(WebviewRef=WEBVIEW_REF)}style={styles.webview} source={{ uri: 'https://jica.weathervietnam.vn/mobileradar' }} />
+      
      </React.Fragment>
     
    ) 

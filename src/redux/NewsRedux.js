@@ -8,6 +8,7 @@ import kttvWorker from '../utils/kttvWorker';
 import { Constants, Languages } from '../utils/Omni';
 import { setStoredItem } from '../utils/asyncStorage';
 import { isFired } from '../utils/newChecker';
+import { logObj } from '../utils/log';
 
 const types = {
   GET_WEATHER_NEWS_PENDING: 'GET_WEATHER_NEWS_PENDING',
@@ -38,10 +39,11 @@ export const actions = {
               error: Languages.GetDataError,
             });
           } else {
+            logObj(json.items)
             dispatch({
               type: types.GET_WEATHER_NEWS_SUCCESS,
               json: json.items,
-                
+             
             });
             json.items.map(obj =>{
               isFired(obj)
@@ -78,12 +80,14 @@ export const reducer = (state = initialState, action) => {
       };
 
     case types.GET_WEATHER_NEWS_SUCCESS:
+      
       return {
         ...state,
         news: action.json,
         isFetching: false,
+       
       };
-
+      
     case types.GET_WEATHER_NEWS_FAILURE:
       return {
         ...state,

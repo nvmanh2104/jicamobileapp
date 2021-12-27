@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { colorSet, fontSizeSet } from '../../AppStyles';
-
+import Device from '../../utils/Device'
 export default StyleSheet.create({
   container: {
     backgroundColor: '#d9d9db',
@@ -14,6 +14,7 @@ export default StyleSheet.create({
     fontSize: fontSizeSet.large,
   },
   HtmlView:{
-    marginHorizontal:5
+    marginBottom:Device.Window.height*0.09,
+    marginHorizontal:10,
   }
 });

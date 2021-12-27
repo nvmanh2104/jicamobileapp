@@ -1,15 +1,12 @@
 import React from 'react';
-import { StatusBar, View } from 'react-native';
+import { StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 
-import { actions as newsActions } from '../../redux/NewsRedux';
 //import TransparentLayout from '../../components/TransparentLayout';
-import Article from '../../components/Article';
 // import Spinner from '../../components/Spinner';
 // import { moment } from '../../utils/Omni';
-import { colorSet } from '../../AppStyles';
+import Header from '../../components/Header';
 import styles from './styles';
-import { log } from '../../utils/log';
 import { WebView } from 'react-native-webview';
 
 class SatelliteScreen extends React.PureComponent {
@@ -42,12 +39,13 @@ class SatelliteScreen extends React.PureComponent {
 
   render() {
     // const { isFetching, news } = this.props;  
-
+    let WebviewRef
     return (
       <React.Fragment>
       <StatusBar barStyle="light-content"></StatusBar>
-      <View style={styles.header}></View>
-      <WebView style={styles.webview} source={{ uri: 'http://jica.weathervietnam.vn/mobilesatelite' }} />
+      {/* <View style={styles.header}></View> */}
+      <Header isShow ={true} onRefresh = {()=>{WebviewRef&&WebviewRef.reload()}} />
+      <WebView ref ={WEBVIEW_REF=>(WebviewRef=WEBVIEW_REF)} style={styles.webview} source={{ uri: 'https://jica.weathervietnam.vn/mobilesatelite' }} />
       </React.Fragment>
     );
   }

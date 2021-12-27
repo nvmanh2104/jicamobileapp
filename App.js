@@ -8,7 +8,7 @@ import {PersistGate} from 'redux-persist/es/integration/react';
 import Router from './src/Router';
 import BackgroundFetch from "react-native-background-fetch";
 import NetworkChecker from 'react-native-network-checker';
-
+// import {initNotifications} from './src/utils/newPostsNotificationSevice'
 import {
   headlessGetNews,
 } from './src/utils/headLessFetch';
@@ -17,14 +17,16 @@ import {log} from './src/utils/log';
 class App extends React.Component {
   componentDidMount() {
     // Initialize BackgroundFetch ONLY ONCE when component mounts.
-    this.initBackgroundFetch();
+    // initNotifications()
+    this.initBackgroundFetch()
+
   }
 
   async initBackgroundFetch() {
     // BackgroundFetch event handler.
     const onEvent = async (taskId) => {
       // console.log('[BackgroundFetch] task: ', taskId);
-      // Do your background work...
+      //Do your background work...
       await this.addEvent(taskId);
       // IMPORTANT:  You must signal to the OS that your task is complete.
       BackgroundFetch.finish(taskId);
@@ -49,6 +51,7 @@ class App extends React.Component {
 
     // console.log('[BackgroundFetch] configure status: ', status);
   }
+  
 
   // Add a BackgroundFetch event to <FlatList>
   addEvent(taskId) {

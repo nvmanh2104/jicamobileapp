@@ -31,7 +31,8 @@ class SearchBar extends PureComponent {
               autoFocus
               style={[styles.search, { paddingHorizontal: 20 }]}
               onChangeText={onSearch}
-              placeholder={placeholder || 'Tìm địa điểm'}
+              placeholder={placeholder || this.props.language ? 'Tìm địa điểm':'Search Location'}
+              placeholderTextColor ="#A8A8A8"
             />
         </View>
         {/* <View style={styles.cancelButton}>
@@ -73,6 +74,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius: 20,
     backgroundColor: '#EFEFF4',
+    color :'black'
   },
   searchIcon: {
     opacity: 1,

@@ -51,7 +51,7 @@
     "react-native-switch-pro": "^1.0.5",
     "react-native-table-component": "^1.2.1",
     "react-native-vector-icons": "^8.1.0",
-    "react-native-webview": "^6.0.2",
+    "react-native-webview": "^7.0.1",
     "react-redux": "^7.2.4",
     "react-timer-mixin": "^0.13.4",
     "reactotron-react-native": "^5.0.0",

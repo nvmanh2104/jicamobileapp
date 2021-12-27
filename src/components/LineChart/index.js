@@ -22,11 +22,10 @@ class LineChart extends React.PureComponent {
 
   render() {
     var {data} = this.props;
-    
     // var yMin = data.reduce((min, p) => p.y < min ? p.y : min, data[0].y);
     // var yMax = data.length ===0?0: parseInt(data.reduce((max, p) => p.y > max ? p.y : max, data[0].y));
      var yMax = data.length ===0?0: Math.max.apply(Math, data.map(function(o) { return o.y; }))+1;
-
+// console.log(data)
     return (
       <React.Fragment>
         {data.length !==0?

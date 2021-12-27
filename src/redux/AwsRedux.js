@@ -7,6 +7,7 @@
  import kttvWorker from '../utils/kttvWorker';
  import { Constants, Languages } from '../utils/Omni';
  import { combineReducers } from 'redux';
+import { debug } from 'react-native-reanimated';
 
 
  const types = {

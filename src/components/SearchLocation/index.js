@@ -108,6 +108,7 @@ class SearchLocation extends React.PureComponent {
         {/* <View style={styleSet.transparentStatusBar} /> */}
         <SearchBar    
           onSearch={this.searchLocationDelayed}
+          language ={this.props.language}
           // onCancel={() => navigation.goBack()}
         />
         <FlatList

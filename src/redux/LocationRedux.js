@@ -72,6 +72,7 @@ export const actions = {
 
   getGeolocationAddress: location => (dispatch, getState) => {
     const {locationReducer} = getState();
+   
     if (
       location &&
       location.latitude &&
@@ -82,7 +83,6 @@ export const actions = {
       kttvWorker
         .getLocationAddress(location)
         .then(data => {
-          // log(data.data.features[0]);
           if (
             data === undefined ||
             data.error ||
@@ -90,6 +90,7 @@ export const actions = {
             !data.data.features ||
             !data.data.features[0]
           ) {
+        
             dispatch({
               type: types.GET_GEOLOCATION_ADDRESS_ERROR,
             });
@@ -97,7 +98,7 @@ export const actions = {
             const {addressText, state, district, ward} = parseLocationAddress(
               data.data.features[0],
             );
-
+            
             dispatch({
               type: types.UPDATE_GEOLOCATION_ADDRESS,
               latitude: location.latitude,

@@ -1,7 +1,7 @@
 /**
  * @format
  */
-import messaging from "@react-native-firebase/messaging";
+// import messaging from "@react-native-firebase/messaging";
 import PushNotification from "react-native-push-notification";
 import PushNotificationIOS from "@react-native-community/push-notification-ios";
 import {AppRegistry,Platform} from 'react-native';
@@ -64,5 +64,6 @@ PushNotification.configure({
   
   // Register your BackgroundFetch HeadlessTask
   BackgroundFetch.registerHeadlessTask(MyHeadlessTask);
+
 
 AppRegistry.registerComponent(appName, () => App);

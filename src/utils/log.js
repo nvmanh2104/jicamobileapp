@@ -1,5 +1,6 @@
 import reactotron from 'reactotron-react-native';
 
+
 export const log = values => {
   if (__DEV__) {
     reactotron.log(values);
@@ -12,4 +13,8 @@ export const warn = values => {
     console.warn(values);
   }
 };
+
+export const logObj = values =>{
+  console.log(JSON.stringify(values,null,4))
+}
 export const error = values => __DEV__ && reactotron.error(values);

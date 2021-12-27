@@ -9,7 +9,7 @@ import Article from '../../components/Article';
 // import { moment } from '../../utils/Omni';
 import { colorSet } from '../../AppStyles';
 import styles from './styles';
-import { log } from '../../utils/log';
+import { logObj } from '../../utils/log';
 
 
 class NewsScreen extends React.PureComponent {
@@ -57,6 +57,7 @@ class NewsScreen extends React.PureComponent {
 
   render() {
     const { isFetching, news} = this.props;  
+    
     return (
       <React.Fragment>
         <StatusBar barStyle="light-content" />

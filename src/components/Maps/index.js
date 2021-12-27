@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  Dimensions,
-} from 'react-native';
+import {Text, View, Dimensions} from 'react-native';
 import {connect} from 'react-redux';
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import CustomIcon from '../../components/BottomBarIcon';
@@ -23,7 +19,7 @@ class Maps extends React.PureComponent {
 
   constructor(props) {
     super(props);
-
+    this.mapRef = React.createRef();
     this.state = {
       //   isNewsModalOpen: false,
       //   viewingNews: null,
@@ -56,31 +52,52 @@ class Maps extends React.PureComponent {
   clickMarker = StationID => {
     var current = moment().format('YYYY-MM-DDTHH:mm:ss');
 
-    this.props.openAWSModal();
     this.props.getRain10mDatas({
       StationIDs: StationID,
-      DateTimeFrom: moment()
-        .add(-6, 'h')
-        .format('YYYY-MM-DDTHH:mm:ss'),
-      DateTimeTo:current
+      DateTimeFrom: moment().add(-4, 'h').format('YYYY-MM-DDTHH:mm:ss'),
+      DateTimeTo: current,
     });
     this.props.getRain1hDatas({
       StationIDs: StationID,
-      DateTimeFrom: moment()
-        .add(-24, 'h')
-        .format('YYYY-MM-DDTHH:mm:ss'),
-      DateTimeTo:current
+      DateTimeFrom: moment().add(-24, 'h').format('YYYY-MM-DDTHH:mm:ss'),
+      DateTimeTo: current,
     });
-    
+    this.props.openAWSModal();
   };
-
-
+  componentDidUpdate(locationAdress){
+  
+    if(this.props.locationAdress !==locationAdress){
+    
+      if(this.props.locationAdress [0]&&this.props.locationAdress [0].latitude){
+        // console.log('vao2')
+        let r = {
+          latitude: this.props.locationAdress [0].latitude,
+          longitude: this.props.locationAdress [0].longitude,
+          latitudeDelta: LATITUDE_DELTA,
+          longitudeDelta: LONGITUDE_DELTA,
+        }
+        this.mapView.animateToRegion(r, 2000);
+    }
+       
+    }
+      
+  }
   render() {
-    const {data, stations,locationAdress} = this.props;
+    const {data, stations, locationAdress} = this.props;
+    // console.log('Maps' + locationAdress[0].latitude);
     var mergeList = stations.map(t1 => ({
       ...t1,
       ...data.find(t2 => t2.StationID === t1.StationID),
     }));
+    // if(locationAdress[0].latitude){
+    //   this.mapRef.current.animateToRegion({
+    //     latitude: locationAdress[0].latitude,
+    //     longitude: locationAdress[0].longitude,
+    //     latitudeDelta: LATITUDE_DELTA,
+    //     longitudeDelta: LONGITUDE_DELTA,
+    //   })
+    // }
+   
 
     return (
       <React.Fragment>
@@ -99,7 +116,9 @@ class Maps extends React.PureComponent {
               longitude: locationAdress[0].longitude,
               latitudeDelta: LATITUDE_DELTA,
               longitudeDelta: LONGITUDE_DELTA,
-            }}>
+            }}
+            ref = {(ref)=>this.mapView=ref}
+            >
             {mergeList.map((station, index) => {
               let style =
                 station.TotalRain === undefined
@@ -144,7 +163,7 @@ class Maps extends React.PureComponent {
 }
 
 const mapStateToProps = ({locationReducer}) => ({
-  locationAdress:locationReducer.locationAdressReducer.savedLocations,
+  locationAdress: locationReducer.locationAdressReducer.savedLocations,
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
